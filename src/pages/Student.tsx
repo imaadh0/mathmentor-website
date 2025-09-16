@@ -29,6 +29,29 @@ const Student: React.FC = () => {
                 <p className="hero-subtitle">Interactive lessons and practice<br />designed for students.</p>
                 <h1 className="hero-title">Learn Math Smarter</h1>
               </div>
+
+              {/* Left Signboard */}
+              <div className="left-signboard">
+                <p className="signboard-text">Access thousands of<br />lessons and practice<br />exercises tailored to<br />your grade and<br />skill level.</p>
+              </div>
+
+              {/* Right Signboard */}
+              <div className="right-signboard">
+                <p className="signboard-text">Master math concepts<br />step by step with<br />expert-designed<br />study plans for<br />better learning.</p>
+              </div>
+        </div>
+      </section>
+
+      {/* Math Made Better Section */}
+      <section className="math-made-better-section">
+        <div className="mmb-image-container">
+          <img src="/student/MMB1.png" alt="Math Made Better" className="mmb-background-image" />
+          
+          {/* Text Overlay */}
+          <div className="mmb-text-overlay">
+            <h2 className="mmb-title">Math Made Better</h2>
+            <p className="mmb-subtitle">Enhance your learning with powerful tools and features</p>
+          </div>
         </div>
       </section>
 

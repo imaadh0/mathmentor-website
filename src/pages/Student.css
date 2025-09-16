@@ -1,3 +1,20 @@
+/* Font Face Declarations */
+@font-face {
+  font-family: 'Clash';
+  src: url('/fonts/Clash_Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash';
+  src: url('/fonts/Clash_Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Student Page Styles */
 .student-page {
   position: relative;
@@ -57,7 +74,7 @@
   width: 90%;
   height: auto;
   object-fit: contain;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
 }
 
@@ -80,6 +97,7 @@
   color: #45290E;
   margin-bottom: 1rem;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  font-display: swap;
 }
 
 .hero-title {
@@ -89,43 +107,114 @@
   line-height: 1.1;
   color: #45290E;
   margin: 0;
-  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(184, 134, 11, 0.6), 0px 0px 8px rgba(184, 134, 11, 0.4);
   white-space: nowrap;
+  font-display: swap;
 }
 
 /* Left Signboard */
 .left-signboard {
   position: absolute;
-  left: 8%;
-  top: 45%;
+  left: 10%;
+  top: 60%;
   width: 22%;
-  z-index: 3;
+  height: 200px;
+  z-index: 4;
   pointer-events: none;
+  text-align: center;
 }
 
 /* Right Signboard */
 .right-signboard {
   position: absolute;
-  right: 8%;
-  top: 45%;
+  right: 10%;
+  top: 60%;
   width: 22%;
-  z-index: 3;
+  height: 200px;
+  z-index: 4;
   pointer-events: none;
+  text-align: center;
 }
 
 .signboard-text {
   font-family: 'Clash', sans-serif;
   font-weight: 400;
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: 1.5rem;
+  line-height: 1.1;
   color: #45290E;
   margin: 0;
   text-align: center;
-  background: rgba(69, 41, 14, 0.1);
-  padding: 1rem;
-  border-radius: 8px;
-  border: 2px solid #45290E;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+/* Math Made Better Section */
+.math-made-better-section {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.mmb-image-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mmb-background-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* MMB Text Overlay */
+.mmb-text-overlay {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
+  pointer-events: none;
+  width: 90%;
+  max-width: 800px;
+}
+
+.mmb-title {
+  font-family: 'Clash', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
+  color: #FDCB3F;
+  margin: 0 0 1rem 0;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mmb-subtitle {
+  font-family: 'Clash', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  line-height: 1.2;
+  color: #DDD9D9;
+  margin: 0;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Features Section */
@@ -518,6 +607,16 @@
   .hero-subtitle {
     font-size: clamp(1rem, 3vw, 1.8rem);
   }
+  
+  .left-signboard {
+    left: 8%;
+    top: 60%;
+  }
+  
+  .right-signboard {
+    right: 8%;
+    top: 60%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -529,9 +628,16 @@
     font-size: clamp(0.9rem, 2.5vw, 1.6rem);
   }
   
-  .left-signboard,
+  .left-signboard {
+    left: 6%;
+    top: 60%;
+    width: 28%;
+  }
+  
   .right-signboard {
-    width: 25%;
+    right: 6%;
+    top: 60%;
+    width: 28%;
   }
 }
 
@@ -552,15 +658,58 @@
     margin-bottom: 0.5rem;
   }
   
-  .left-signboard,
-  .right-signboard {
+  .mmb-text-overlay {
+    top: 8%;
+    width: 95%;
+    padding: 0 0.5rem;
+  }
+  
+  .mmb-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 0.8rem;
+  }
+  
+  .mmb-subtitle {
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+  }
+  
+  .left-signboard {
+    left: 4%;
     width: 30%;
-    top: 50%;
+    top: 58%;
+    height: 180px;
+  }
+  
+  .right-signboard {
+    right: 4%;
+    width: 30%;
+    top: 58%;
+    height: 180px;
   }
   
   .signboard-text {
-    font-size: 0.8rem;
-    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .left-signboard {
+    left: 5%;
+    width: 30%;
+    top: 50%;
+    height: 130px;
+  }
+  
+  .right-signboard {
+    right: 5%;
+    width: 30%;
+    top: 50%;
+    height: 130px;
+  }
+  
+  .signboard-text {
+    font-size: 0.55rem;
+    line-height: 1.0;
   }
 }
 
@@ -581,15 +730,47 @@
     margin-bottom: 0.25rem;
   }
   
-  .left-signboard,
+  .mmb-text-overlay {
+    top: 6%;
+    width: 98%;
+    padding: 0 0.25rem;
+  }
+  
+  .mmb-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 0.6rem;
+  }
+  
+  .mmb-subtitle {
+    font-size: clamp(0.7rem, 2vw, 1rem);
+  }
+  
+  .mmb-background-image {
+    display: none;
+  }
+  
+  .math-made-better-section {
+    background-color: #0D0D0D;
+    padding: 4rem 2rem;
+  }
+  
+  .left-signboard {
+    left: 3%;
+    width: 32%;
+    top: 58%;
+    height: 120px;
+  }
+  
   .right-signboard {
-    width: 35%;
-    top: 45%;
+    right: 3%;
+    width: 32%;
+    top: 58%;
+    height: 120px;
   }
   
   .signboard-text {
-    font-size: 0.7rem;
-    padding: 0.6rem;
+    font-size: 0.65rem;
+    line-height: 1.0;
   }
   
   .learn-title {
@@ -651,5 +832,47 @@
   
   .pricing-title {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .left-signboard {
+    left: 2%;
+    width: 35%;
+    top: 58%;
+    height: 100px;
+  }
+  
+  .right-signboard {
+    right: 2%;
+    width: 35%;
+    top: 58%;
+    height: 100px;
+  }
+  
+  .signboard-text {
+    font-size: 0.55rem;
+    line-height: 0.9;
+  }
+}
+
+@media (max-width: 320px) {
+  .left-signboard {
+    left: 1%;
+    width: 38%;
+    top: 58%;
+    height: 90px;
+  }
+  
+  .right-signboard {
+    right: 1%;
+    width: 38%;
+    top: 58%;
+    height: 90px;
+  }
+  
+  .signboard-text {
+    font-size: 0.5rem;
+    line-height: 0.8;
   }
 }
