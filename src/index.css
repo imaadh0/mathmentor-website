@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* Browser normalization for consistent positioning */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100%;
+}
+
 /* Clash of Clans Fonts */
 @font-face {
   font-family: "ClashOfClans";

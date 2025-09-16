@@ -1,7 +1,7 @@
 function About() {
   return (
     <div
-      className="w-full"
+      className="w-full relative"
       style={{
         backgroundColor: "#0D0D0D",
         backgroundImage: "url(/About/About-bg.png)",
@@ -10,7 +10,9 @@ function About() {
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "scroll",
         minHeight: "100vh",
+        height: "100vh",
         fontFamily: '"ClashOfClans", sans-serif',
+        overflow: "hidden",
       }}
     >
       {/* Branch decorations */}
@@ -31,8 +33,8 @@ function About() {
 
       {/* Wizard character */}
       <div
-        className="absolute left-16 sm:left-20 md:left-24 lg:left-62 top-1/2 transform -translate-y-1/2 pointer-events-none"
-        style={{ zIndex: 2 }}
+        className="absolute left-10 sm:left-14 md:left-18 lg:left-54 top-1/2 transform -translate-y-1/2 pointer-events-none"
+        style={{ zIndex: 4 }}
       >
         <img
           src="/About/wizard.png"
@@ -43,7 +45,7 @@ function About() {
 
       {/* Wooden board with text */}
       <div
-        className="absolute right-4 sm:right-6 md:right-8 -top-4 sm:-top-2 md:top-0 pointer-events-none"
+        className="absolute right-16 sm:right-18 md:right-20 -top-4 sm:-top-2 md:top-0"
         style={{ zIndex: 2 }}
       >
         <img
@@ -53,34 +55,70 @@ function About() {
         />
 
         {/* Text overlay on the board */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-6 md:p-8">
+        <div className="absolute inset-0 flex flex-col justify-start items-center pt-18 sm:pt-28 md:pt-80 px-4 sm:px-6 md:px-8">
           {/* Top text */}
-          <div className="text-center mb-2">
-            <p className="text-xs sm:text-sm font-clash text-black leading-tight">
+          <div className="text-center mb-3 sm:mb-4">
+            <p
+              className="text-lg sm:text-xl md:text-2xl font-clash leading-tight drop-shadow-lg"
+              style={{ color: "#45290E" }}
+            >
               Empowering Future
             </p>
-            <p className="text-xs sm:text-sm font-clash text-black leading-tight">
+            <p
+              className="text-lg sm:text-xl md:text-2xl font-clash leading-tight drop-shadow-lg"
+              style={{ color: "#45290E" }}
+            >
               Mathematicians
             </p>
           </div>
 
           {/* Main title */}
-          <div className="text-center mb-4">
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-clash-bold text-yellow-500 leading-tight">
+          <div className="text-center mb-4 sm:mb-6">
+            <p
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-clash-bold leading-tight"
+              style={{
+                color: "#FDCB3F",
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+              }}
+            >
               About Math
             </p>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-clash-bold text-yellow-500 leading-tight">
+            <p
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-clash-bold leading-tight"
+              style={{
+                color: "#FDCB3F",
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+              }}
+            >
               Mentor
             </p>
           </div>
 
           {/* Bottom text */}
           <div className="text-center">
-            <p className="text-xs font-clash text-black leading-tight">
-              Empowering students to master mathematics through
+            <p
+              className="text-base sm:text-lg md:text-xl font-clash text-white leading-tight"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}
+            >
+              Empowering students to
             </p>
-            <p className="text-xs font-clash text-black leading-tight">
-              personalized learning experiences
+            <p
+              className="text-base sm:text-lg md:text-xl font-clash text-white leading-tight"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}
+            >
+              Master Mathematics through
+            </p>
+            <p
+              className="text-base sm:text-lg md:text-xl font-clash text-white leading-tight"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}
+            >
+              personalized learning
+            </p>
+            <p
+              className="text-base sm:text-lg md:text-xl font-clash text-white leading-tight"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}
+            >
+              experiences
             </p>
           </div>
         </div>
