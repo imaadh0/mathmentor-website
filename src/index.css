@@ -1,5 +1,31 @@
 @import "tailwindcss";
 
+/* Clash of Clans Fonts */
+@font-face {
+  font-family: "ClashOfClans";
+  src: url("./fonts/Clash_Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ClashOfClans-Bold";
+  src: url("./fonts/Clash_Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Clash font utility classes */
+.font-clash {
+  font-family: "ClashOfClans", sans-serif !important;
+}
+
+.font-clash-bold {
+  font-family: "ClashOfClans-Bold", sans-serif !important;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
