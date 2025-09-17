@@ -9,9 +9,7 @@ function About() {
         backgroundPosition: "top center",
         backgroundRepeat: "no-repeat",
         minHeight: "100vh",
-        height: "100vh",
         fontFamily: '"ClashOfClans", sans-serif',
-        overflow: "hidden",
       }}
     >
       {/* Branch decorations */}
@@ -121,6 +119,196 @@ function About() {
               >
                 experiences
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Second Section - Why Choose Math Mentor - FIXED RESPONSIVE CARDS */}
+      <div className="w-full relative py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40 2xl:py-48">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          {/* Section Title */}
+          <div className="text-center mb-3 sm:mb-4 md:mb-6">
+            <h2
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-clash-bold leading-tight mb-1 sm:mb-2"
+              style={{
+                color: "#FDCB3F",
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+              }}
+            >
+              WHY CHOOSE MATH MENTOR?
+            </h2>
+            <p
+              className="text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg font-clash text-white leading-relaxed max-w-4xl mx-auto"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}
+            >
+              Discover WHY OUR platform is the perfect CHOICE for YOUR Math
+              journey.
+            </p>
+          </div>
+
+          {/* Cards Grid - Larger Responsive Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 place-items-center justify-items-center">
+            {/* Card 1 */}
+            <div className="relative group w-full max-w-[300px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[340px] xl:max-w-[360px] 2xl:max-w-[380px] mx-auto flex justify-center">
+              <img
+                src="/About/landscape-card.png"
+                alt="Card background"
+                className="w-[300px] h-[240px] sm:w-[350px] sm:h-[280px] md:w-[360px] md:h-[288px] lg:w-[340px] lg:h-[272px] xl:w-[360px] xl:h-[288px] 2xl:w-[380px] 2xl:h-[304px] object-cover"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
+                <h3
+                  className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
+                  style={{ color: "#A25B2B" }}
+                >
+                  Personalized Learning Paths
+                </h3>
+                <p
+                  className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
+                  style={{
+                    color: "#45290E",
+                    fontFamily: "Inter, sans-serif",
+                  }}
+                >
+                  Customized curriculum that adapts to your unique learning
+                  style, pace and goal for optimal understanding
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="relative group w-full max-w-[300px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[340px] xl:max-w-[360px] 2xl:max-w-[380px] mx-auto flex justify-center">
+              <img
+                src="/About/landscape-card.png"
+                alt="Card background"
+                className="w-[300px] h-[240px] sm:w-[350px] sm:h-[280px] md:w-[360px] md:h-[288px] lg:w-[340px] lg:h-[272px] xl:w-[360px] xl:h-[288px] 2xl:w-[380px] 2xl:h-[304px] object-cover"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
+                <h3
+                  className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
+                  style={{ color: "#A25B2B" }}
+                >
+                  Rapid Skill Development
+                </h3>
+                <p
+                  className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
+                  style={{
+                    color: "#45290E",
+                    fontFamily: "Inter, sans-serif",
+                  }}
+                >
+                  Accelerate your learning with focused practice modules
+                  designed to build skills efficiently
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="relative group w-full max-w-[300px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[340px] xl:max-w-[360px] 2xl:max-w-[380px] mx-auto flex justify-center">
+              <img
+                src="/About/landscape-card.png"
+                alt="Card background"
+                className="w-[300px] h-[240px] sm:w-[350px] sm:h-[280px] md:w-[360px] md:h-[288px] lg:w-[340px] lg:h-[272px] xl:w-[360px] xl:h-[288px] 2xl:w-[380px] 2xl:h-[304px] object-cover"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
+                <h3
+                  className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
+                  style={{ color: "#A25B2B" }}
+                >
+                  Comprehensive Concept Mastery
+                </h3>
+                <p
+                  className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
+                  style={{
+                    color: "#45290E",
+                    fontFamily: "Inter, sans-serif",
+                  }}
+                >
+                  Deep dive into mathematical concepts with interactive tools
+                  and real-world applications
+                </p>
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="relative group w-full max-w-[300px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[340px] xl:max-w-[360px] 2xl:max-w-[380px] mx-auto flex justify-center">
+              <img
+                src="/About/landscape-card.png"
+                alt="Card background"
+                className="w-[300px] h-[240px] sm:w-[350px] sm:h-[280px] md:w-[360px] md:h-[288px] lg:w-[340px] lg:h-[272px] xl:w-[360px] xl:h-[288px] 2xl:w-[380px] 2xl:h-[304px] object-cover"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
+                <h3
+                  className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
+                  style={{ color: "#A25B2B" }}
+                >
+                  Expert Guidance
+                </h3>
+                <p
+                  className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
+                  style={{
+                    color: "#45290E",
+                    fontFamily: "Inter, sans-serif",
+                  }}
+                >
+                  Learn from experienced math educators who provide personalized
+                  support and mentorship
+                </p>
+              </div>
+            </div>
+
+            {/* Card 5 */}
+            <div className="relative group w-full max-w-[300px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[340px] xl:max-w-[360px] 2xl:max-w-[380px] mx-auto flex justify-center">
+              <img
+                src="/About/landscape-card.png"
+                alt="Card background"
+                className="w-[300px] h-[240px] sm:w-[350px] sm:h-[280px] md:w-[360px] md:h-[288px] lg:w-[340px] lg:h-[272px] xl:w-[360px] xl:h-[288px] 2xl:w-[380px] 2xl:h-[304px] object-cover"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
+                <h3
+                  className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
+                  style={{ color: "#A25B2B" }}
+                >
+                  Interactive Learning Tools
+                </h3>
+                <p
+                  className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
+                  style={{
+                    color: "#45290E",
+                    fontFamily: "Inter, sans-serif",
+                  }}
+                >
+                  Engage with dynamic visualizations, simulations, and hands-on
+                  activities that make math come alive
+                </p>
+              </div>
+            </div>
+
+            {/* Card 6 */}
+            <div className="relative group w-full max-w-[300px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[340px] xl:max-w-[360px] 2xl:max-w-[380px] mx-auto flex justify-center">
+              <img
+                src="/About/landscape-card.png"
+                alt="Card background"
+                className="w-[300px] h-[240px] sm:w-[350px] sm:h-[280px] md:w-[360px] md:h-[288px] lg:w-[340px] lg:h-[272px] xl:w-[360px] xl:h-[288px] 2xl:w-[380px] 2xl:h-[304px] object-cover"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
+                <h3
+                  className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
+                  style={{ color: "#A25B2B" }}
+                >
+                  Progress Tracking
+                </h3>
+                <p
+                  className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
+                  style={{
+                    color: "#45290E",
+                    fontFamily: "Inter, sans-serif",
+                  }}
+                >
+                  Monitor your growth with detailed analytics and celebrate
+                  milestones on your mathematical journey
+                </p>
+              </div>
             </div>
           </div>
         </div>
