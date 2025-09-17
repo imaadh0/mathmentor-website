@@ -163,6 +163,7 @@
   position: relative;
   width: 100%;
   z-index: 2;
+  min-height: 100vh;
 }
 
 .mmb-image-container {
@@ -178,6 +179,142 @@
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+/* MMB 5 Cards layout */
+.mmb-cards {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1500px, 97%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 3.5vw, 48px);
+  z-index: 3;
+}
+
+.mmb-card-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.mmb-card {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.mmb-card-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.mmb-card-title {
+  font-family: 'Clash', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.3rem, 3.2vw, 1.8rem);
+  color: #FFFFFF;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.mmb-card-description {
+  font-family: 'Clash', sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.9rem, 2.4vw, 1.2rem);
+  color: #F0F0F0;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Second row of 2 centered using grid auto-placement */
+.mmb-cards .mmb-card-container:nth-child(4) {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  justify-self: center;
+  width: 50%;
+}
+
+.mmb-cards .mmb-card-container:nth-child(5) {
+  grid-column: 2 / 4;
+  grid-row: 2;
+  justify-self: center;
+  width: 50%;
+}
+
+@media (max-width: 992px) {
+  .mmb-cards {
+    top: 28%;
+    width: 98%;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mmb-cards {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: clamp(20px, 4vw, 32px);
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(16px, 3vw, 24px);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .mmb-cards .mmb-card-container:nth-child(1),
+  .mmb-cards .mmb-card-container:nth-child(2) {
+    grid-column: auto;
+    width: 100%;
+  }
+  
+  .mmb-cards .mmb-card-container:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 65%;
+  }
+  
+  .mmb-cards .mmb-card-container:nth-child(4),
+  .mmb-cards .mmb-card-container:nth-child(5) {
+    grid-column: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mmb-cards {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 3vw, 20px);
+    align-items: center;
+  }
+  
+  .mmb-cards .mmb-card-container:nth-child(1),
+  .mmb-cards .mmb-card-container:nth-child(2),
+  .mmb-cards .mmb-card-container:nth-child(3),
+  .mmb-cards .mmb-card-container:nth-child(4),
+  .mmb-cards .mmb-card-container:nth-child(5) {
+    width: 80%;
+    height: auto;
+  }
 }
 
 /* MMB Text Overlay */
@@ -215,6 +352,329 @@
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* Section 3 */
+.section3 {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.section3-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section3-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Plans That Work for You Section */
+.plans-section {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  padding: 4rem 0;
+}
+
+.plans-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Plans Text Overlay */
+.plans-text-overlay {
+  text-align: center;
+  margin-bottom: 3rem;
+  z-index: 3;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plans-title {
+  font-family: 'Clash', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
+  color: #FDCB3F;
+  margin: 0 0 1rem 0;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.plans-subtitle {
+  font-family: 'Clash', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin: 0;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Pricing Cards Container */
+.pricing-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(40px, 6vw, 80px);
+  width: 98%;
+  max-width: 1600px;
+  z-index: 3;
+}
+
+.plan-card {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.plan-card-image:hover {
+  transform: translateY(-5px);
+}
+
+/* Plan Card Text Overlay */
+.plan-card-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 4;
+  pointer-events: none;
+  width: 80%;
+  max-width: 280px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-card-title {
+  font-family: 'Clash', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+  color: #FFFFFF;
+  margin: 0 0 0.3rem 0;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.pricing-card-subtitle {
+  font-family: 'Clash', sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  color: #FDCB3F;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.pricing-card-price {
+  margin: 0.5rem 0;
+}
+
+.price-amount {
+  font-family: 'Clash', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.price-period {
+  font-family: 'Clash', sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  color: #FDCB3F;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.pricing-card-description {
+  font-family: 'Clash', sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.6rem, 1.2vw, 0.8rem);
+  color: #FFFFFF;
+  margin: 0.3rem 0 0.8rem 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-item {
+  font-family: 'Clash', sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.6rem, 1.2vw, 0.8rem);
+  color: #FFFFFF;
+  margin: 0.2rem 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.feature-item.checked::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #00FF00;
+  font-weight: bold;
+}
+
+.feature-item.disabled {
+  opacity: 0.5;
+  color: #CCCCCC;
+}
+
+.feature-item.disabled::before {
+  content: '✗';
+  position: absolute;
+  left: 0;
+  color: #999999;
+  font-weight: bold;
+}
+
+.pricing-button {
+  font-family: 'Clash', sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.8rem, 1.6vw, 1.1rem);
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  box-shadow: none;
+  transition: none;
+  pointer-events: auto;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  white-space: nowrap;
+}
+
+.pricing-button.orange {
+  background: transparent;
+}
+
+.pricing-button.blue {
+  background: transparent;
+}
+
+.pricing-button.pink {
+  background: transparent;
+  left: 55%;
+}
+
+.pricing-button:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: none;
+}
+
+.pricing-button:active,
+.pricing-button:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Responsive Design for Plans Section */
+@media (max-width: 768px) {
+  .plans-section {
+    padding: 3rem 0;
+  }
+  
+  .plans-text-overlay {
+    margin-bottom: 2rem;
+    width: 95%;
+  }
+  
+  .plans-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 0.8rem;
+  }
+  
+  .plans-subtitle {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  }
+  
+  .pricing-cards-container {
+    grid-template-columns: 1fr;
+    gap: clamp(32px, 5vw, 48px);
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .plans-section {
+    padding: 2rem 0;
+  }
+  
+  .plans-text-overlay {
+    margin-bottom: 1.5rem;
+    width: 98%;
+  }
+  
+  .plans-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 0.6rem;
+  }
+  
+  .plans-subtitle {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+  
+  .pricing-cards-container {
+    width: 98%;
+    gap: clamp(28px, 4.5vw, 40px);
+  }
 }
 
 /* Features Section */
@@ -746,12 +1206,15 @@
   }
   
   .mmb-background-image {
-    display: none;
+    display: block;
+    height: 200vh;
+    object-fit: cover;
   }
   
   .math-made-better-section {
-    background-color: #0D0D0D;
-    padding: 4rem 2rem;
+    background-color: transparent;
+    padding: 0 0 2rem 0;
+    min-height: 200vh;
   }
   
   .left-signboard {
