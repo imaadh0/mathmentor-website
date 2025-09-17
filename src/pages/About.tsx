@@ -313,6 +313,174 @@ function About() {
           </div>
         </div>
       </div>
+
+      {/* Third Section - Our Foundation */}
+      <div className="w-full relative pt-0 pb-16 sm:pb-20 md:pb-24 lg:pb-32 xl:pb-40 2xl:pb-48">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          {/* Section Title */}
+          <div className="text-center mb-3 sm:mb-4 md:mb-6">
+            <h2
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-clash-bold leading-tight mb-2 sm:mb-3"
+              style={{
+                color: "#FDCB3F",
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+              }}
+            >
+              Our Foundation
+            </h2>
+            <div
+              className="text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg font-clash text-white leading-relaxed max-w-4xl mx-auto text-center"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}
+            >
+              <p>Built on principles that drive excellence in</p>
+              <p>mathematical education</p>
+            </div>
+          </div>
+
+          {/* Desktop Layout - Hidden on mobile/tablet */}
+          <div className="hidden lg:flex lg:items-center lg:justify-center">
+            {/* Our Mission Card - Left */}
+            <div className="relative flex-shrink-0 -mr-6 xl:-mr-8 2xl:-mr-10">
+              <img
+                src="/About/about-card-2.png"
+                alt="Our Mission Card"
+                className="w-[320px] h-auto xl:w-[380px] 2xl:w-[420px] object-contain"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-6 xl:p-8">
+                <h3
+                  className="text-lg xl:text-xl 2xl:text-2xl font-clash-bold text-center mb-3 xl:mb-4 leading-tight"
+                  style={{ 
+                    color: "#FDCB3F",
+                    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)"
+                  }}
+                >
+                  Our Mission
+                </h3>
+                <p
+                  className="text-xs xl:text-sm 2xl:text-base font-clash text-center leading-relaxed"
+                  style={{
+                    color: "#F5F0E1",
+                    fontFamily: '"ClashOfClans", sans-serif',
+                  }}
+                >
+                  Customized curriculum that adapts to your unique learning style, pace and goal for optimal understanding
+                </p>
+              </div>
+            </div>
+
+            {/* Elf Character - Center */}
+            <div className="flex-shrink-0 -mt-4 xl:-mt-6 2xl:-mt-8 relative z-10">
+              <img
+                src="/About/elf-character.png"
+                alt="Elf Character"
+                className="w-[260px] h-auto xl:w-[320px] 2xl:w-[380px] object-contain"
+              />
+            </div>
+
+            {/* Our Vision Card - Right */}
+            <div className="relative flex-shrink-0 -ml-6 xl:-ml-8 2xl:-ml-10">
+              <img
+                src="/About/about-card-2.png"
+                alt="Our Vision Card"
+                className="w-[320px] h-auto xl:w-[380px] 2xl:w-[420px] object-contain"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-6 xl:p-8">
+                <h3
+                  className="text-lg xl:text-xl 2xl:text-2xl font-clash-bold text-center mb-3 xl:mb-4 leading-tight"
+                  style={{ 
+                    color: "#FDCB3F",
+                    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)"
+                  }}
+                >
+                  Our Vision
+                </h3>
+                <p
+                  className="text-xs xl:text-sm 2xl:text-base font-clash text-center leading-relaxed"
+                  style={{
+                    color: "#F5F0E1",
+                    fontFamily: '"ClashOfClans", sans-serif',
+                  }}
+                >
+                  Customized curriculum that adapts to your unique learning style, pace and goal for optimal understanding
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile/Tablet Layout - Hidden on desktop */}
+          <div className="lg:hidden flex flex-col items-center gap-6 sm:gap-8">
+            {/* Elf Character - Top */}
+            <div className="flex justify-center">
+              <img
+                src="/About/elf-character.png"
+                alt="Elf Character"
+                className="w-[120px] h-auto sm:w-[140px] md:w-[160px] object-contain"
+              />
+            </div>
+
+            {/* Cards - Bottom */}
+            <div className="flex flex-col gap-4 sm:gap-6 w-full max-w-xs mx-auto px-4">
+              {/* Our Vision Card */}
+              <div className="relative w-full">
+                <img
+                  src="/About/about-card-2.png"
+                  alt="Our Vision Card"
+                  className="w-full h-auto object-contain max-w-[280px] mx-auto"
+                />
+                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5">
+                  <h3
+                    className="text-sm sm:text-base md:text-lg font-clash-bold text-center mb-2 sm:mb-3 leading-tight"
+                    style={{ 
+                      color: "#FDCB3F",
+                      textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)"
+                    }}
+                  >
+                    Our Vision
+                  </h3>
+                  <p
+                    className="text-xs sm:text-sm font-clash text-center leading-relaxed"
+                    style={{
+                      color: "#F5F0E1",
+                      fontFamily: '"ClashOfClans", sans-serif',
+                    }}
+                  >
+                    Customized curriculum that adapts to your unique learning style, pace and goal for optimal understanding
+                  </p>
+                </div>
+              </div>
+
+              {/* Our Mission Card */}
+              <div className="relative w-full">
+                <img
+                  src="/About/about-card-2.png"
+                  alt="Our Mission Card"
+                  className="w-full h-auto object-contain max-w-[280px] mx-auto"
+                />
+                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5">
+                  <h3
+                    className="text-sm sm:text-base md:text-lg font-clash-bold text-center mb-2 sm:mb-3 leading-tight"
+                    style={{ 
+                      color: "#FDCB3F",
+                      textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)"
+                    }}
+                  >
+                    Our Mission
+                  </h3>
+                  <p
+                    className="text-xs sm:text-sm font-clash text-center leading-relaxed"
+                    style={{
+                      color: "#F5F0E1",
+                      fontFamily: '"ClashOfClans", sans-serif',
+                    }}
+                  >
+                    Customized curriculum that adapts to your unique learning style, pace and goal for optimal understanding
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
