@@ -26,8 +26,8 @@ const Student: React.FC = () => {
           
               {/* Text Overlay */}
               <div className="hero-text-overlay">
-                <p className="hero-subtitle">Interactive lessons and practice<br />designed for students.</p>
-                <h1 className="hero-title">Learn Math Smarter</h1>
+                <p className="hero-subtitle">Interactive lessons and<span className="mobile-and-br"><br /></span> practice<span className="desktop-practice-br"><br /></span> designed for<span className="mobile-for-br"><br /></span> students.</p>
+                <h1 className="hero-title">Learn Math<span className="mobile-math-br"><br /></span> Smarter</h1>
               </div>
 
               {/* Left Signboard */}
@@ -110,7 +110,7 @@ const Student: React.FC = () => {
         <div className="plans-container">
           {/* Text Overlay */}
           <div className="plans-text-overlay">
-            <h2 className="plans-title">Plans That Work for You</h2>
+            <h2 className="plans-title">Plans That Work for You<span className="mobile-br"><br /></span></h2>
             <p className="plans-subtitle">No hidden fees, just clear and simple<br /> learning options.</p>
           </div>
 
