@@ -296,7 +296,7 @@ function Tutor() {
         </div>
 
         {/* Third Section - Plans That Work for You */}
-        <div className="w-full relative pt-6 sm:pt-8 md:pt-10 lg:pt-12 xl:pt-14 2xl:pt-16 pb-16 sm:pb-20 md:pb-24 lg:pb-32 xl:pb-40 2xl:pb-48">
+        <div className="w-full relative pt-6 sm:pt-8 md:pt-10 lg:pt-12 xl:pt-14 2xl:pt-16 pb-2 sm:pb-3 md:pb-4 lg:pb-6 xl:pb-8 2xl:pb-10">
           {/* Section Title */}
           <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 text-center mb-0">
             <h2
@@ -443,6 +443,126 @@ function Tutor() {
                   Get paid promptly for every session you conduct, with full
                   transparency and easy tracking of your earnings.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Fourth Section - What Tutors Say */}
+        <div className="w-full relative pt-0 sm:pt-0 md:pt-0 lg:pt-0 xl:pt-0 2xl:pt-0 pb-16 sm:pb-20 md:pb-24">
+          <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+            {/* Section Title */}
+            <div className="text-center mb-20 sm:mb-24 md:mb-28 lg:mb-16 xl:mb-20">
+              <h2
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-clash-bold leading-tight mb-2 sm:mb-3 md:mb-4"
+                style={{ color: "#FDCB3F", textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)", fontFamily: '"ClashOfClans", sans-serif' }}
+              >
+                What Tutors Say
+              </h2>
+            </div>
+
+            {/* Desktop Layout - 3 cards in a row */}
+            <div className="hidden lg:grid lg:grid-cols-3 lg:gap-4 xl:gap-6 2xl:gap-8 place-items-center">
+              {/* Testimonial Card 1 */}
+              <div className="relative w-full max-w-[600px] xl:max-w-[750px] 2xl:max-w-[900px]">
+                <img src="/tutor/tutor-rating-card.png" alt="Tutor testimonial card" className="w-full h-auto object-contain scale-110 xl:scale-125 2xl:scale-140" />
+                {/* Rating Circle */}
+                <div className="absolute -top-20 xl:-top-18 2xl:-top-16 left-1/2 transform -translate-x-1/2 z-10">
+                  <img src="/tutor/tutor-rating-circle.png" alt="Rating circle" className="w-40 h-40 xl:w-44 xl:h-44 2xl:w-48 2xl:h-48" />
+                </div>
+                {/* Profile Image */}
+                <div className="absolute -top-14 xl:-top-12 2xl:-top-10 left-1/2 transform -translate-x-1/2 w-28 h-28 xl:w-32 xl:h-32 2xl:w-36 2xl:h-36 rounded-full overflow-hidden z-20">
+                  <img src="/tutor/tutor-rating-image.png" alt="Tutor profile" className="w-full h-full object-cover" />
+                </div>
+                {/* Content Overlay */}
+                <div className="absolute inset-0 flex flex-col justify-center items-center px-10 xl:px-12 2xl:px-16 pt-24 xl:pt-28 2xl:pt-32 pb-12 xl:pb-16 2xl:pb-20">
+                  <h3 className="text-base xl:text-lg 2xl:text-xl font-clash-bold text-center mb-2 xl:mb-3 2xl:mb-4" style={{ color: "white", fontFamily: '"ClashOfClans", sans-serif', textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}>Sajad AHamed</h3>
+                  <div className="flex justify-center mb-3 xl:mb-4 2xl:mb-5">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-500 text-xl xl:text-2xl 2xl:text-3xl mx-0.5">★</span>))}</div>
+                  <p className="text-xs xl:text-sm 2xl:text-base font-clash text-center leading-relaxed" style={{ color: "white", fontFamily: '"ClashOfClans", sans-serif', textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)" }}>Join our community in minutes by creating your free tutor profile. Highlight your skills, set your subjects</p>
+                </div>
+              </div>
+
+              {/* Testimonial Card 2 */}
+              <div className="relative w-full max-w-[600px] xl:max-w-[750px] 2xl:max-w-[900px]">
+                <img src="/tutor/tutor-rating-card.png" alt="Tutor testimonial card" className="w-full h-auto object-contain scale-110 xl:scale-125 2xl:scale-140" />
+                <div className="absolute -top-20 xl:-top-18 2xl:-top-16 left-1/2 transform -translate-x-1/2 z-10">
+                  <img src="/tutor/tutor-rating-circle.png" alt="Rating circle" className="w-40 h-40 xl:w-44 xl:h-44 2xl:w-48 2xl:h-48" />
+                </div>
+                <div className="absolute -top-14 xl:-top-12 2xl:-top-10 left-1/2 transform -translate-x-1/2 w-28 h-28 xl:w-32 xl:h-32 2xl:w-36 2xl:h-36 rounded-full overflow-hidden z-20">
+                  <img src="/tutor/tutor-rating-image.png" alt="Tutor profile" className="w-full h-full object-cover" />
+                </div>
+                <div className="absolute inset-0 flex flex-col justify-center items-center px-10 xl:px-12 2xl:px-16 pt-24 xl:pt-28 2xl:pt-32 pb-12 xl:pb-16 2xl:pb-20">
+                  <h3 className="text-base xl:text-lg 2xl:text-xl font-clash-bold text-center mb-2 xl:mb-3 2xl:mb-4" style={{ color: "white", fontFamily: '"ClashOfClans", sans-serif', textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}>Sajad AHamed</h3>
+                  <div className="flex justify-center mb-3 xl:mb-4 2xl:mb-5">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-500 text-xl xl:text-2xl 2xl:text-3xl mx-0.5">★</span>))}</div>
+                  <p className="text-xs xl:text-sm 2xl:text-base font-clash text-center leading-relaxed" style={{ color: "white", fontFamily: '"ClashOfClans", sans-serif', textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)" }}>Join our community in minutes by creating your free tutor profile. Highlight your skills, set your subjects</p>
+                </div>
+              </div>
+
+              {/* Testimonial Card 3 */}
+              <div className="relative w-full max-w-[600px] xl:max-w-[750px] 2xl:max-w-[900px]">
+                <img src="/tutor/tutor-rating-card.png" alt="Tutor testimonial card" className="w-full h-auto object-contain scale-110 xl:scale-125 2xl:scale-140" />
+                <div className="absolute -top-20 xl:-top-18 2xl:-top-16 left-1/2 transform -translate-x-1/2 z-10">
+                  <img src="/tutor/tutor-rating-circle.png" alt="Rating circle" className="w-40 h-40 xl:w-44 xl:h-44 2xl:w-48 2xl:h-48" />
+                </div>
+                <div className="absolute -top-14 xl:-top-12 2xl:-top-10 left-1/2 transform -translate-x-1/2 w-28 h-28 xl:w-32 xl:h-32 2xl:w-36 2xl:h-36 rounded-full overflow-hidden z-20">
+                  <img src="/tutor/tutor-rating-image.png" alt="Tutor profile" className="w-full h-full object-cover" />
+                </div>
+                <div className="absolute inset-0 flex flex-col justify-center items-center px-10 xl:px-12 2xl:px-16 pt-24 xl:pt-28 2xl:pt-32 pb-12 xl:pb-16 2xl:pb-20">
+                  <h3 className="text-base xl:text-lg 2xl:text-xl font-clash-bold text-center mb-2 xl:mb-3 2xl:mb-4" style={{ color: "white", fontFamily: '"ClashOfClans", sans-serif', textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}>Sajad AHamed</h3>
+                  <div className="flex justify-center mb-3 xl:mb-4 2xl:mb-5">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-500 text-xl xl:text-2xl 2xl:text-3xl mx-0.5">★</span>))}</div>
+                  <p className="text-xs xl:text-sm 2xl:text-base font-clash text-center leading-relaxed" style={{ color: "white", fontFamily: '"ClashOfClans", sans-serif', textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)" }}>Join our community in minutes by creating your free tutor profile. Highlight your skills, set your subjects</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Layout - Single column */}
+            <div className="lg:hidden flex flex-col items-center gap-24 sm:gap-28 md:gap-28">
+              {/* Testimonial Card 1 */}
+              <div className="relative w-full max-w-[500px] sm:max-w-[600px] md:max-w-[480px]">
+                <img src="/tutor/tutor-rating-card.png" alt="Tutor testimonial card" className="w-full h-auto object-contain scale-135 sm:scale-150 md:scale-125" />
+                <div className="absolute -top-13 sm:-top-12 md:-top-10 left-1/2 transform -translate-x-1/2 z-10">
+                  <img src="/tutor/tutor-rating-circle.png" alt="Rating circle" className="w-44 h-44 sm:w-48 sm:h-48 md:w-40 md:h-40" />
+                </div>
+                <div className="absolute -top-7 sm:-top-6 md:-top-5 left-1/2 transform -translate-x-1/2 w-32 h-32 sm:w-32 sm:h-32 md:w-28 md:h-28 rounded-full overflow-hidden z-20">
+                  <img src="/tutor/tutor-rating-image.png" alt="Tutor profile" className="w-full h-full object-cover" />
+                </div>
+                <div className="absolute inset-0 flex flex-col justify-center items-center px-6 sm:px-8 md:px-6 pt-20 sm:pt-24 md:pt-20 pb-10 sm:pb-12 md:pb-10">
+                  <h3 className="text-base sm:text-base md:text-lg font-clash-bold text-center mb-2 sm:mb-3 md:mb-2" style={{ color: "white", fontFamily: '"ClashOfClans", sans-serif', textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}>Sajad AHamed</h3>
+                  <div className="flex justify-center mb-3 sm:mb-4 md:mb-3">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-500 text-lg sm:text-lg md:text-xl mx-0.5">★</span>))}</div>
+                  <p className="text-sm sm:text-sm md:text-sm font-clash text-center leading-relaxed" style={{ color: "white", fontFamily: '"ClashOfClans", sans-serif', textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)" }}>Join our community in minutes by creating your free tutor profile. Highlight your skills, set your subjects</p>
+                </div>
+              </div>
+
+              {/* Testimonial Card 2 */}
+              <div className="relative w-full max-w-[500px] sm:max-w-[600px] md:max-w-[480px]">
+                <img src="/tutor/tutor-rating-card.png" alt="Tutor testimonial card" className="w-full h-auto object-contain scale-135 sm:scale-150 md:scale-125" />
+                <div className="absolute -top-13 sm:-top-12 md:-top-10 left-1/2 transform -translate-x-1/2 z-10">
+                  <img src="/tutor/tutor-rating-circle.png" alt="Rating circle" className="w-44 h-44 sm:w-48 sm:h-48 md:w-40 md:h-40" />
+                </div>
+                <div className="absolute -top-7 sm:-top-6 md:-top-5 left-1/2 transform -translate-x-1/2 w-32 h-32 sm:w-32 sm:h-32 md:w-28 md:h-28 rounded-full overflow-hidden z-20">
+                  <img src="/tutor/tutor-rating-image.png" alt="Tutor profile" className="w-full h-full object-cover" />
+                </div>
+                <div className="absolute inset-0 flex flex-col justify-center items-center px-6 sm:px-8 md:px-6 pt-20 sm:pt-24 md:pt-20 pb-10 sm:pb-12 md:pb-10">
+                  <h3 className="text-base sm:text-base md:text-lg font-clash-bold text-center mb-2 sm:mb-3 md:mb-2" style={{ color: "white", fontFamily: '"ClashOfClans", sans-serif', textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}>Sajad AHamed</h3>
+                  <div className="flex justify-center mb-3 sm:mb-4 md:mb-3">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-500 text-lg sm:text-lg md:text-xl mx-0.5">★</span>))}</div>
+                  <p className="text-sm sm:text-sm md:text-sm font-clash text-center leading-relaxed" style={{ color: "white", fontFamily: '"ClashOfClans", sans-serif', textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)" }}>Join our community in minutes by creating your free tutor profile. Highlight your skills, set your subjects</p>
+                </div>
+              </div>
+
+              {/* Testimonial Card 3 */}
+              <div className="relative w-full max-w-[500px] sm:max-w-[600px] md:max-w-[480px]">
+                <img src="/tutor/tutor-rating-card.png" alt="Tutor testimonial card" className="w-full h-auto object-contain scale-135 sm:scale-150 md:scale-125" />
+                <div className="absolute -top-13 sm:-top-12 md:-top-10 left-1/2 transform -translate-x-1/2 z-10">
+                  <img src="/tutor/tutor-rating-circle.png" alt="Rating circle" className="w-44 h-44 sm:w-48 sm:h-48 md:w-40 md:h-40" />
+                </div>
+                <div className="absolute -top-7 sm:-top-6 md:-top-5 left-1/2 transform -translate-x-1/2 w-32 h-32 sm:w-32 sm:h-32 md:w-28 md:h-28 rounded-full overflow-hidden z-20">
+                  <img src="/tutor/tutor-rating-image.png" alt="Tutor profile" className="w-full h-full object-cover" />
+                </div>
+                <div className="absolute inset-0 flex flex-col justify-center items-center px-6 sm:px-8 md:px-6 pt-20 sm:pt-24 md:pt-20 pb-10 sm:pb-12 md:pb-10">
+                  <h3 className="text-base sm:text-base md:text-lg font-clash-bold text-center mb-2 sm:mb-3 md:mb-2" style={{ color: "white", fontFamily: '"ClashOfClans", sans-serif', textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}>Sajad AHamed</h3>
+                  <div className="flex justify-center mb-3 sm:mb-4 md:mb-3">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-500 text-lg sm:text-lg md:text-xl mx-0.5">★</span>))}</div>
+                  <p className="text-sm sm:text-sm md:text-sm font-clash text-center leading-relaxed" style={{ color: "white", fontFamily: '"ClashOfClans", sans-serif', textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)" }}>Join our community in minutes by creating your free tutor profile. Highlight your skills, set your subjects</p>
+                </div>
               </div>
             </div>
           </div>
