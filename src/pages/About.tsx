@@ -496,7 +496,7 @@ function About() {
               <img
                 src="/About/modern-card.png"
                 alt="Modern card with branches background"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain"
                 style={{
                   minHeight: "600px",
                 }}
@@ -511,7 +511,7 @@ function About() {
                 >
                   {/* Main Heading */}
                   <h2
-                    className="text-4xl md:text-6xl lg:text-5xl font-clash-bold text-center mb-3 md:mb-4 leading-tight"
+                    className="text-4xl md:text-6xl lg:text-3xl font-clash-bold text-center md:mb-4 leading-tight"
                     style={{
                       color: "#FDCB3F",
                       textShadow: "3px 3px 6px rgba(0, 0, 0, 0.8)",
@@ -521,7 +521,7 @@ function About() {
                     Master Math with our
                   </h2>
                   <h2
-                    className="text-4xl md:text-6xl lg:text-5xl font-clash-bold text-center mb-6 md:mb-7 leading-tight"
+                    className="text-4xl md:text-6xl lg:text-2xl font-clash-bold text-center mb-1 md:mb-7 leading-tight"
                     style={{
                       color: "#FDCB3F",
                       textShadow: "3px 3px 6px rgba(0, 0, 0, 0.8)",
@@ -546,9 +546,14 @@ function About() {
                 </div>
 
                 {/* Button - Lowered a lot more with negative margins */}
-                <div
-                  className="mt-auto relative cursor-pointer hover:scale-105 transition-transform duration-200"
-                  style={{ marginBottom: "-2.5rem" }}
+                <button
+                  className="mt-120 relative cursor-pointer hover:scale-105 transition-transform duration-200"
+                  style={{
+                    marginBottom: "-2.5rem",
+                    background: "transparent",
+                    border: "none",
+                    padding: 0,
+                  }}
                 >
                   <img
                     src="/About/modern-card-button.png"
@@ -556,7 +561,7 @@ function About() {
                     className="w-auto h-auto max-w-[280px] md:max-w-[380px] lg:max-w-[360px]"
                     style={{ minWidth: "160px" }}
                   />
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -575,7 +580,7 @@ function About() {
               />
 
               {/* Tablet Content Overlay - Responsive text and button sizing */}
-              <div className="absolute inset-0 flex flex-col justify-center items-center p-6 md:p-8">
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-6 md:p-8 gap-4">
                 {/* Text Content - Smaller for large tablets */}
                 <div
                   className="absolute left-1/2 transform -translate-x-1/2"
@@ -583,7 +588,7 @@ function About() {
                 >
                   {/* Main Heading - Smaller for 1024x1366 and 1024x600 */}
                   <h2
-                    className="text-lg font-clash-bold text-center mb-1 leading-tight md:[min-height:1366px]:text-sm md:[min-width:1024px][max-height:600px]:text-sm"
+                    className="mt-2 text-2xl font-clash-bold text-center mb-1 leading-tight md:[min-height:1366px]:text-sm md:[min-width:1024px][max-height:600px]:text-sm"
                     style={{
                       color: "#FDCB3F",
                       textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
@@ -593,7 +598,7 @@ function About() {
                     Master Math with our
                   </h2>
                   <h2
-                    className="text-lg font-clash-bold text-center mb-2 leading-tight md:[min-height:1366px]:text-sm md:[min-width:1024px][max-height:600px]:text-sm"
+                    className="text-2xl font-clash-bold text-center mb-2 leading-tight md:[min-height:1366px]:text-sm md:[min-width:1024px][max-height:600px]:text-sm"
                     style={{
                       color: "#FDCB3F",
                       textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
@@ -605,7 +610,7 @@ function About() {
 
                   {/* Subtitle - Smaller for large tablets */}
                   <p
-                    className="text-sm font-clash text-center leading-relaxed max-w-lg mx-auto md:[min-height:1366px]:text-xs md:[min-width:1024px][max-height:600px]:text-xs"
+                    className="text-lg font-clash text-center leading-relaxed max-w-lg mx-auto [min-width:780px][max-width:1024px]:text-lg"
                     style={{
                       color: "white",
                       textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
@@ -618,9 +623,14 @@ function About() {
                 </div>
 
                 {/* Button - Larger for all tablets, positioned lower */}
-                <div
+                <button
                   className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer hover:scale-105 transition-transform duration-200"
-                  style={{ bottom: "8%" }}
+                  style={{
+                    bottom: "2%",
+                    background: "transparent",
+                    border: "none",
+                    padding: 0,
+                  }}
                 >
                   <img
                     src="/About/modern-card-button.png"
@@ -628,66 +638,51 @@ function About() {
                     className="w-auto h-auto max-w-[200px] md:max-w-[240px]"
                     style={{ minWidth: "160px" }}
                   />
-                </div>
+                </button>
               </div>
             </div>
           </div>
-
           {/* Mobile Layout */}
           <div className="md:hidden relative overflow-hidden">
-            {/* Mobile Modern Card - Full Width */}
             <div className="relative w-full">
               <img
                 src="/About/modern-card-mobile.png"
-                alt="Modern card with branches mobile background"
+                alt="Modern card mobile"
                 className="w-full h-auto object-cover"
-                style={{
-                  minHeight: "500px",
-                }}
               />
 
-              {/* Mobile Content Overlay - Better positioned and spaced */}
-              <div
-                className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6"
-                style={{ paddingTop: "45%", paddingBottom: "0%" }}
-              >
-                {/* Main Heading */}
-                <h2
-                  className="text-sm sm:text-base font-clash-bold text-center mb-1 leading-tight"
-                  style={{
-                    color: "#FDCB3F",
-                    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
-                    fontFamily: '"ClashOfClans", sans-serif',
-                  }}
-                >
-                  Master Math
-                </h2>
-                <h2
-                  className="text-sm sm:text-base font-clash-bold text-center mb-2 sm:mb-3 leading-tight"
-                  style={{
-                    color: "#FDCB3F",
-                    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
-                    fontFamily: '"ClashOfClans", sans-serif',
-                  }}
-                >
-                  with our Free Package
-                </h2>
-
-                {/* Subtitle */}
-                <p
-                  className="text-xs font-clash text-center mb-2 sm:mb-3 leading-relaxed px-1 max-w-[160px] sm:max-w-[200px]"
-                  style={{
-                    color: "white",
-                    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
-                    fontFamily: '"ClashOfClans", sans-serif',
-                  }}
-                >
-                  Customized curriculum that adapts to your unique learning
-                  style, pace and goal for optimal understanding
-                </p>
+              {/* Overlay */}
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-6 gap-4 sm:mt-40 mt-30">
+                {/* Text */}
+                <div className="flex flex-col items-center text-center">
+                  <h2
+                    className="text-3xl font-clash-bold text-center mb-3 [@media(max-width:420px)]:text-2xl [@media(max-width:420px)]:mt-8"
+                    style={{
+                      color: "#FDCB3F",
+                      textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+                      fontFamily: '"ClashOfClans", sans-serif',
+                    }}
+                  >
+                    Master Math
+                  </h2>
+                  <h2
+                    className="text-2xl max-w-[200px] "
+                    style={{
+                      color: "#FDCB3F",
+                      textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+                      fontFamily: '"ClashOfClans", sans-serif',
+                    }}
+                  >
+                    with our Free Package
+                  </h2>
+                  <p className="text-md font-clash text-white text-center max-w-[300px] sm:max-w-[320px] leading-relaxed mt-10 [@media(max-width:516px)]:max-w-[200px]">
+                    Customized curriculum that adapts to your unique learning
+                    style, pace and goal for optimal understanding
+                  </p>
+                </div>
 
                 {/* Button */}
-                <div className="relative cursor-pointer hover:scale-105 transition-transform duration-200">
+                <div className="mt-4 sm:mt-[-50px] [@media(max-width:420px)]:mt-[-60px] [@media(max-width:348px)]:mt-[-300px] ">
                   <img
                     src="/About/modern-card-button.png"
                     alt="Start Free Trial button"
