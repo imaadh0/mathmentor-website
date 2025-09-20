@@ -23,7 +23,7 @@ function Tutor() {
           />
         </div>
 
-        {/* Content wrapper - Fixed layout structure */}
+        {/* Content wrapper */}
         <div className="flex flex-col items-center justify-start h-full relative z-10 xl:flex-row xl:items-start xl:justify-start xl:pl-20 2xl:pl-28 xl:pt-0 2xl:pt-0">
           {/* Wizard Boy - Absolute positioning */}
           <div
@@ -39,7 +39,7 @@ function Tutor() {
             />
           </div>
 
-          {/* Hero Card - Improved responsive scaling */}
+          {/* Hero Card */}
           <div
             className="relative order-1 xl:order-1 xl:flex-shrink-0 xl:mt-0 xl:ml-8 2xl:ml-16"
             style={{ zIndex: 1 }}
@@ -50,7 +50,6 @@ function Tutor() {
               className="w-full max-w-[340px] sm:max-w-[450px] md:max-w-[520px] xl:max-w-[580px] 2xl:max-w-[640px] 3xl:max-w-[700px]"
             />
 
-            {/* Text overlay - Better responsive text scaling */}
             <div className="absolute inset-0 flex flex-col justify-center items-center px-3 sm:px-4 md:px-6 mt-48 sm:mt-52 md:mt-64 lg:mt-60 xl:mt-80 2xl:mt-80">
               {/* Top text */}
               <div className="text-center mb-2 sm:mb-3 md:mb-4 xl:mb-3 2xl:mb-4">
@@ -127,8 +126,8 @@ function Tutor() {
           </div>
         </div>
 
-        {/* Second Section - Your Provided Points Expanded */}
-        <div className="w-full relative py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40 2xl:py-48">
+        {/* Second Section */}
+        <div className="w-full relative pt-12 sm:pt-16 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-32 pb-8 sm:pb-10 md:pb-12 lg:pb-16 xl:pb-20 2xl:pb-24">
           <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             {/* Section Title */}
             <div className="text-center mb-3 sm:mb-4 md:mb-6">
@@ -296,123 +295,153 @@ function Tutor() {
           </div>
         </div>
 
-        {/* Third Section - How It Works */}
-        <div className="w-full relative pt-0 pb-16 sm:pb-20 md:pb-24 lg:pb-32 xl:pb-40 2xl:pb-48">
-          <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-            {/* Section Title */}
-            <div className="text-center mb-3 sm:mb-4 md:mb-6">
-              <h2
-                className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-clash-bold leading-tight mb-2 sm:mb-3"
-                style={{
-                  color: "#FDCB3F",
-                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
-                }}
-              >
-                How It Works
-              </h2>
-              <div
-                className="text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg font-clash text-white leading-relaxed max-w-4xl mx-auto text-center"
-                style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}
-              >
-                <p>Simple steps to start your tutoring journey</p>
+        {/* Third Section - Plans That Work for You */}
+        <div className="w-full relative pt-6 sm:pt-8 md:pt-10 lg:pt-12 xl:pt-14 2xl:pt-16 pb-16 sm:pb-20 md:pb-24 lg:pb-32 xl:pb-40 2xl:pb-48">
+          {/* Section Title */}
+          <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 text-center mb-0">
+            <h2
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-clash-bold leading-tight mb-2 sm:mb-3"
+              style={{
+                color: "#FDCB3F",
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+              }}
+            >
+              Plans That Work for You
+            </h2>
+            <p
+              className="text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg font-clash text-white leading-relaxed max-w-4xl mx-auto"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}
+            >
+              No hidden fees, just clear and simple learning options
+            </p>
+          </div>
+
+          {/* Plans Image */}
+          <div className="w-full -mt-20 sm:-mt-24 md:-mt-32 lg:-mt-40 xl:-mt-48 relative">
+            {/* Mobile Image */}
+            <img
+              src="/tutor/tutor-plans-that-work-mobile.png"
+              alt="Plans That Work for You"
+              className="w-full h-auto sm:hidden"
+            />
+
+            {/* Desktop Image */}
+            <img
+              src="/tutor/tutor-plans-that-work.png"
+              alt="Plans That Work for You"
+              className="hidden sm:block w-full h-auto"
+            />
+
+            {/* Text Overlays for Mobile */}
+            <div className="sm:hidden absolute inset-0">
+              {/* Sign Up - Top Left */}
+              <div className="absolute top-[17%] left-[28%] w-[45%] h-[22%] flex flex-col justify-center items-center p-1">
+                <h3
+                  className="text-base font-clash-bold text-center mb-1"
+                  style={{ color: "#A25B2B" }}
+                >
+                  Sign Up
+                </h3>
+                <p
+                  className="text-[11px] font-sans text-center leading-tight"
+                  style={{ color: "#45290E", fontFamily: "Inter, sans-serif" }}
+                >
+                  Join our community in minutes by creating your free tutor
+                  profile. Highlight your skills, set your subjects and
+                  availability, and let students discover you easily.
+                </p>
+              </div>
+
+              {/* Teach Online - Top Right */}
+              <div className="absolute top-[40%] right-[28%] w-[45%] h-[22%] flex flex-col justify-center items-center p-1">
+                <h3
+                  className="text-base font-clash-bold text-center mb-1"
+                  style={{ color: "#A25B2B" }}
+                >
+                  Teach Online
+                </h3>
+                <p
+                  className="text-[11px] font-sans text-center leading-tight"
+                  style={{ color: "#45290E", fontFamily: "Inter, sans-serif" }}
+                >
+                  Engage students with interactive online classes, quizzes, and
+                  assignments. Customize your lessons, track progress, and make
+                  learning fun and effective from anywhere.
+                </p>
+              </div>
+
+              {/* Get Paid - Bottom Center */}
+              <div className="absolute bottom-[13%] left-1/2 transform -translate-x-1/2 w-[45%] h-[22%] flex flex-col justify-center items-center p-1">
+                <h3
+                  className="text-base font-clash-bold text-center mb-1"
+                  style={{ color: "#A25B2B" }}
+                >
+                  Get Paid
+                </h3>
+                <p
+                  className="text-[11px] font-sans text-center leading-tight"
+                  style={{ color: "#45290E", fontFamily: "Inter, sans-serif" }}
+                >
+                  Earn confidently with our secure, hassle-free payout system.
+                  Get paid promptly for every session you conduct, with full
+                  transparency and easy tracking of your earnings.
+                </p>
               </div>
             </div>
 
-            {/* Steps Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16">
-              {/* Step 1 */}
-              <div className="text-center">
-                <div className="relative mb-6">
-                  <div
-                    className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 mx-auto rounded-full flex items-center justify-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-clash-bold"
-                    style={{
-                      backgroundColor: "#FDCB3F",
-                      color: "#0D0D0D",
-                      textShadow: "none",
-                    }}
-                  >
-                    1
-                  </div>
-                </div>
+            {/* Text Overlays for Desktop */}
+            <div className="hidden sm:block absolute inset-0">
+              {/* Sign Up - Top Left */}
+              <div className="absolute top-[34%] left-[12%] w-[28%] h-[24%] flex flex-col justify-center items-center p-2">
                 <h3
-                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-clash-bold mb-3 sm:mb-4"
-                  style={{
-                    color: "#FDCB3F",
-                    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
-                  }}
+                  className="text-xs sm:text-sm md:text-base lg:text-2xl xl:text-3xl font-clash-bold text-center mb-2"
+                  style={{ color: "#A25B2B" }}
                 >
-                  Create Profile
+                  Sign Up
                 </h3>
                 <p
-                  className="text-sm sm:text-base md:text-lg font-clash text-white leading-relaxed"
-                  style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}
+                  className="text-[9px] sm:text-[10px] md:text-[10px] lg:text-sm xl:text-base font-clash text-center leading-relaxed"
+                  style={{ color: "#45290E" }}
                 >
-                  Sign up and create your tutor profile. Highlight your
-                  expertise and teaching style.
+                  Join our community in minutes by creating your free tutor
+                  profile. Highlight your skills, set your subjects and
+                  availability, and let students discover you easily.
                 </p>
               </div>
 
-              {/* Step 2 */}
-              <div className="text-center">
-                <div className="relative mb-6">
-                  <div
-                    className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 mx-auto rounded-full flex items-center justify-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-clash-bold"
-                    style={{
-                      backgroundColor: "#FDCB3F",
-                      color: "#0D0D0D",
-                      textShadow: "none",
-                    }}
-                  >
-                    2
-                  </div>
-                </div>
+              {/* Teach Online - Top Right */}
+              <div className="absolute top-[42%] right-[12%] w-[28%] h-[24%] flex flex-col justify-center items-center p-2">
                 <h3
-                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-clash-bold mb-3 sm:mb-4"
-                  style={{
-                    color: "#FDCB3F",
-                    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
-                  }}
+                  className="text-xs sm:text-sm md:text-base lg:text-2xl xl:text-3xl font-clash-bold text-center mb-2"
+                  style={{ color: "#A25B2B" }}
                 >
-                  Get Matched
+                  Teach Online
                 </h3>
                 <p
-                  className="text-sm sm:text-base md:text-lg font-clash text-white leading-relaxed"
-                  style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}
+                  className="text-[9px] sm:text-[10px] md:text-[10px] lg:text-sm xl:text-base font-clash text-center leading-relaxed"
+                  style={{ color: "#45290E" }}
                 >
-                  Our system matches you with students who need help in your
-                  areas of expertise.
+                  Engage students with interactive online classes, quizzes, and
+                  assignments. Customize your lessons, track progress, and make
+                  learning fun and effective from anywhere.
                 </p>
               </div>
 
-              {/* Step 3 */}
-              <div className="text-center">
-                <div className="relative mb-6">
-                  <div
-                    className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 mx-auto rounded-full flex items-center justify-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-clash-bold"
-                    style={{
-                      backgroundColor: "#FDCB3F",
-                      color: "#0D0D0D",
-                      textShadow: "none",
-                    }}
-                  >
-                    3
-                  </div>
-                </div>
+              {/* Get Paid - Bottom Center */}
+              <div className="absolute bottom-[13.5%] left-[12%] w-[28%] h-[24%] flex flex-col justify-center items-center p-2">
                 <h3
-                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-clash-bold mb-3 sm:mb-4"
-                  style={{
-                    color: "#FDCB3F",
-                    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
-                  }}
+                  className="text-xs sm:text-sm md:text-base lg:text-2xl xl:text-3xl font-clash-bold text-center mb-2"
+                  style={{ color: "#A25B2B" }}
                 >
-                  Start Teaching
+                  Get Paid
                 </h3>
                 <p
-                  className="text-sm sm:text-base md:text-lg font-clash text-white leading-relaxed"
-                  style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}
+                  className="text-[9px] sm:text-[10px] md:text-[10px] lg:text-sm xl:text-base font-clash text-center leading-relaxed"
+                  style={{ color: "#45290E" }}
                 >
-                  Begin teaching sessions and help students achieve their
-                  mathematical goals while earning.
+                  Earn confidently with our secure, hassle-free payout system.
+                  Get paid promptly for every session you conduct, with full
+                  transparency and easy tracking of your earnings.
                 </p>
               </div>
             </div>
