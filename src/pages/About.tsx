@@ -29,9 +29,9 @@ function About() {
           />
         </div>
 
-        {/* Content wrapper - Fixed layout structure */}
+        {/* Content wrapper */}
         <div className="flex flex-col items-center justify-start h-full relative z-10 xl:flex-row xl:items-start xl:justify-center xl:pl-72 2xl:pl-96 xl:pt-0 2xl:pt-0">
-          {/* Wizard - Absolute positioning to avoid affecting board */}
+          {/* Wizard */}
           <div
             className="pointer-events-none order-2 xl:absolute xl:left-24 2xl:left-40 xl:top-20 2xl:top-24"
             style={{ zIndex: 4 }}
@@ -43,7 +43,7 @@ function About() {
             />
           </div>
 
-          {/* Board - Improved responsive scaling */}
+          {/* Board */}
           <div
             className="relative order-1 xl:order-2 xl:flex-shrink-0 xl:mt-0"
             style={{ zIndex: 1 }}
@@ -54,7 +54,7 @@ function About() {
               className="w-full max-w-[420px] sm:max-w-[500px] md:max-w-[600px] xl:max-w-[650px] 2xl:max-w-[750px] 3xl:max-w-[850px]"
             />
 
-            {/* Text overlay - Better responsive text scaling */}
+            {/* Text overlay*/}
             <div className="absolute inset-0 flex flex-col justify-end items-center pb-8 sm:pb-12 md:pb-16 xl:pb-20 2xl:pb-24 px-3 sm:px-4 md:px-6">
               {/* Top text */}
               <div className="text-center mb-2 sm:mb-3 md:mb-4 xl:mb-3 2xl:mb-4">
@@ -125,7 +125,7 @@ function About() {
           </div>
         </div>
 
-        {/* Second Section - Why Choose Math Mentor - FIXED RESPONSIVE CARDS */}
+        {/* Second Section - Why Choose Math Mentor */}
         <div className="w-full relative py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40 2xl:py-48">
           <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             {/* Section Title */}
@@ -148,7 +148,7 @@ function About() {
               </p>
             </div>
 
-            {/* Cards Grid - Larger Responsive Cards */}
+            {/* Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 place-items-center justify-items-center">
               {/* Card 1 */}
               <div className="relative group w-full max-w-[300px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[340px] xl:max-w-[360px] 2xl:max-w-[380px] mx-auto flex justify-center">
@@ -504,7 +504,7 @@ function About() {
 
               {/* Content Overlay */}
               <div className="absolute inset-0 flex flex-col justify-center items-center p-12 lg:p-16 xl:p-20 2xl:p-24">
-                {/* Text Content - Lowered more */}
+                {/* Text Content */}
                 <div
                   className="absolute left-1/2 transform -translate-x-1/2"
                   style={{ top: "45%" }}
@@ -545,7 +545,7 @@ function About() {
                   </p>
                 </div>
 
-                {/* Button - Lowered a lot more with negative margins */}
+                {/* Button */}
                 <button
                   className="mt-120 relative cursor-pointer hover:scale-105 transition-transform duration-200"
                   style={{
@@ -566,7 +566,7 @@ function About() {
             </div>
           </div>
 
-          {/* Tablet Layout - NEW: Specific tablet layout with responsive sizing */}
+          {/* Tablet Layout */}
           <div className="hidden md:block lg:hidden relative overflow-hidden">
             {/* Tablet Modern Card - Full Width */}
             <div className="relative w-full">
@@ -586,7 +586,7 @@ function About() {
                   className="absolute left-1/2 transform -translate-x-1/2"
                   style={{ top: "42%" }}
                 >
-                  {/* Main Heading - Smaller for 1024x1366 and 1024x600 */}
+                  {/* Main Heading */}
                   <h2
                     className="mt-2 text-2xl font-clash-bold text-center mb-1 leading-tight md:[min-height:1366px]:text-sm md:[min-width:1024px][max-height:600px]:text-sm"
                     style={{
@@ -608,7 +608,7 @@ function About() {
                     Free Package
                   </h2>
 
-                  {/* Subtitle - Smaller for large tablets */}
+                  {/* Subtitle */}
                   <p
                     className="text-lg font-clash text-center leading-relaxed max-w-lg mx-auto [min-width:780px][max-width:1024px]:text-lg"
                     style={{
