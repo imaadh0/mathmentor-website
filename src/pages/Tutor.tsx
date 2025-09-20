@@ -150,138 +150,146 @@ function Tutor() {
             </div>
 
             {/* Cards Grid - Responsive layout for 5 cards (3+2) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 place-items-center justify-items-center">
-              {/* Card 1 - Create & Check Quizzes */}
-              <div className="relative group w-full max-w-[300px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[340px] xl:max-w-[320px] 2xl:max-w-[340px] mx-auto flex justify-center">
-                <img
-                  src="/tutor/tutor-points-card.png"
-                  alt="Card background"
-                  className="w-[300px] h-[240px] sm:w-[350px] sm:h-[280px] md:w-[360px] md:h-[288px] lg:w-[340px] lg:h-[272px] xl:w-[320px] xl:h-[256px] 2xl:w-[340px] 2xl:h-[272px] object-cover"
-                />
-                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
-                  <h3
-                    className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
-                    style={{ color: "#A25B2B" }}
-                  >
-                    Create & Check Quizzes
-                  </h3>
-                  <p
-                    className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
-                    style={{
-                      color: "#45290E",
-                      fontFamily: "Inter, sans-serif",
-                    }}
-                  >
-                    Manage and grade quizzes with ease. Save time with automated
-                    results
-                  </p>
+            <div className="space-y-8 lg:space-y-12">
+              {/* First Row - 3 Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 place-items-center justify-items-center">
+                {/* Card 1 - Create & Check Quizzes */}
+                <div className="relative group w-full max-w-[320px] sm:max-w-[370px] md:max-w-[390px] lg:max-w-[370px] xl:max-w-[350px] 2xl:max-w-[370px] mx-auto flex justify-center">
+                  <img
+                    src="/tutor/tutor-points-card.png"
+                    alt="Card background"
+                    className="w-[320px] h-[256px] sm:w-[370px] sm:h-[296px] md:w-[390px] md:h-[312px] lg:w-[370px] lg:h-[296px] xl:w-[350px] xl:h-[280px] 2xl:w-[370px] 2xl:h-[296px] object-cover"
+                  />
+                  <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
+                    <h3
+                      className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
+                      style={{ color: "#A25B2B" }}
+                    >
+                      Create & Check Quizzes
+                    </h3>
+                    <p
+                      className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
+                      style={{
+                        color: "#45290E",
+                        fontFamily: "Inter, sans-serif",
+                      }}
+                    >
+                      Manage and grade quizzes with ease. Save time with
+                      automated results
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 2 - Host Online Classes */}
+                <div className="relative group w-full max-w-[320px] sm:max-w-[370px] md:max-w-[390px] lg:max-w-[370px] xl:max-w-[350px] 2xl:max-w-[370px] mx-auto flex justify-center">
+                  <img
+                    src="/tutor/tutor-points-card.png"
+                    alt="Card background"
+                    className="w-[320px] h-[256px] sm:w-[370px] sm:h-[296px] md:w-[390px] md:h-[312px] lg:w-[370px] lg:h-[296px] xl:w-[350px] xl:h-[280px] 2xl:w-[370px] 2xl:h-[296px] object-cover"
+                  />
+                  <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
+                    <h3
+                      className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
+                      style={{ color: "#A25B2B" }}
+                    >
+                      Host Online Classes
+                    </h3>
+                    <p
+                      className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
+                      style={{
+                        color: "#45290E",
+                        fontFamily: "Inter, sans-serif",
+                      }}
+                    >
+                      Use interactive whiteboard and screen-sharing tools to
+                      make classes engaging and effective.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 3 - Progress Tracking */}
+                <div className="relative group w-full max-w-[320px] sm:max-w-[370px] md:max-w-[390px] lg:max-w-[370px] xl:max-w-[350px] 2xl:max-w-[370px] mx-auto flex justify-center">
+                  <img
+                    src="/tutor/tutor-points-card.png"
+                    alt="Card background"
+                    className="w-[320px] h-[256px] sm:w-[370px] sm:h-[296px] md:w-[390px] md:h-[312px] lg:w-[370px] lg:h-[296px] xl:w-[350px] xl:h-[280px] 2xl:w-[370px] 2xl:h-[296px] object-cover"
+                  />
+                  <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
+                    <h3
+                      className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
+                      style={{ color: "#A25B2B" }}
+                    >
+                      Progress Tracking
+                    </h3>
+                    <p
+                      className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
+                      style={{
+                        color: "#45290E",
+                        fontFamily: "Inter, sans-serif",
+                      }}
+                    >
+                      See your improvement over time with analytics.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Card 2 - Host Online Classes */}
-              <div className="relative group w-full max-w-[300px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[340px] xl:max-w-[320px] 2xl:max-w-[340px] mx-auto flex justify-center">
-                <img
-                  src="/tutor/tutor-points-card.png"
-                  alt="Card background"
-                  className="w-[300px] h-[240px] sm:w-[350px] sm:h-[280px] md:w-[360px] md:h-[288px] lg:w-[340px] lg:h-[272px] xl:w-[320px] xl:h-[256px] 2xl:w-[340px] 2xl:h-[272px] object-cover"
-                />
-                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
-                  <h3
-                    className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
-                    style={{ color: "#A25B2B" }}
-                  >
-                    Host Online Classes
-                  </h3>
-                  <p
-                    className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
-                    style={{
-                      color: "#45290E",
-                      fontFamily: "Inter, sans-serif",
-                    }}
-                  >
-                    Use interactive whiteboard and screen-sharing tools to make
-                    classes engaging and effective.
-                  </p>
-                </div>
-              </div>
+              {/* Second Row - 2 Cards Centered */}
+              <div className="flex justify-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 place-items-center justify-items-center w-full md:w-2/3 lg:w-2/3">
+                  {/* Card 4 - Earn by Teaching */}
+                  <div className="relative group w-full max-w-[320px] sm:max-w-[370px] md:max-w-[390px] lg:max-w-[370px] xl:max-w-[350px] 2xl:max-w-[370px] mx-auto flex justify-center">
+                    <img
+                      src="/tutor/tutor-points-card.png"
+                      alt="Card background"
+                      className="w-[320px] h-[256px] sm:w-[370px] sm:h-[296px] md:w-[390px] md:h-[312px] lg:w-[370px] lg:h-[296px] xl:w-[350px] xl:h-[280px] 2xl:w-[370px] 2xl:h-[296px] object-cover"
+                    />
+                    <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
+                      <h3
+                        className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
+                        style={{ color: "#A25B2B" }}
+                      >
+                        Earn by Teaching
+                      </h3>
+                      <p
+                        className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
+                        style={{
+                          color: "#45290E",
+                          fontFamily: "Inter, sans-serif",
+                        }}
+                      >
+                        Enjoy flexible tutoring options with competitive
+                        payouts, on your schedule.
+                      </p>
+                    </div>
+                  </div>
 
-              {/* Card 3 - Progress Tracking */}
-              <div className="relative group w-full max-w-[300px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[340px] xl:max-w-[320px] 2xl:max-w-[340px] mx-auto flex justify-center">
-                <img
-                  src="/tutor/tutor-points-card.png"
-                  alt="Card background"
-                  className="w-[300px] h-[240px] sm:w-[350px] sm:h-[280px] md:w-[360px] md:h-[288px] lg:w-[340px] lg:h-[272px] xl:w-[320px] xl:h-[256px] 2xl:w-[340px] 2xl:h-[272px] object-cover"
-                />
-                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
-                  <h3
-                    className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
-                    style={{ color: "#A25B2B" }}
-                  >
-                    PROGRESS Tracking
-                  </h3>
-                  <p
-                    className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
-                    style={{
-                      color: "#45290E",
-                      fontFamily: "Inter, sans-serif",
-                    }}
-                  >
-                    See your improvement over time with analytics.
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 4 - Earn by Teaching */}
-              <div className="relative group w-full max-w-[300px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[340px] xl:max-w-[320px] 2xl:max-w-[340px] mx-auto flex justify-center lg:col-start-1 lg:justify-self-center">
-                <img
-                  src="/tutor/tutor-points-card.png"
-                  alt="Card background"
-                  className="w-[300px] h-[240px] sm:w-[350px] sm:h-[280px] md:w-[360px] md:h-[288px] lg:w-[340px] lg:h-[272px] xl:w-[320px] xl:h-[256px] 2xl:w-[340px] 2xl:h-[272px] object-cover"
-                />
-                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
-                  <h3
-                    className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
-                    style={{ color: "#A25B2B" }}
-                  >
-                    Earn by Teaching
-                  </h3>
-                  <p
-                    className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
-                    style={{
-                      color: "#45290E",
-                      fontFamily: "Inter, sans-serif",
-                    }}
-                  >
-                    Enjoy flexible tutoring options with competitive payouts, on
-                    your schedule.
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 5 - Messaging & Chat Support */}
-              <div className="relative group w-full max-w-[300px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[340px] xl:max-w-[320px] 2xl:max-w-[340px] mx-auto flex justify-center lg:col-start-3 lg:justify-self-center">
-                <img
-                  src="/tutor/tutor-points-card.png"
-                  alt="Card background"
-                  className="w-[300px] h-[240px] sm:w-[350px] sm:h-[280px] md:w-[360px] md:h-[288px] lg:w-[340px] lg:h-[272px] xl:w-[320px] xl:h-[256px] 2xl:w-[340px] 2xl:h-[272px] object-cover"
-                />
-                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
-                  <h3
-                    className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
-                    style={{ color: "#A25B2B" }}
-                  >
-                    Messaging & Chat Support
-                  </h3>
-                  <p
-                    className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
-                    style={{
-                      color: "#45290E",
-                      fontFamily: "Inter, sans-serif",
-                    }}
-                  >
-                    Stay connected with students through built-in chat for
-                    guidance and support.
-                  </p>
+                  {/* Card 5 - Messaging & Chat Support */}
+                  <div className="relative group w-full max-w-[320px] sm:max-w-[370px] md:max-w-[390px] lg:max-w-[370px] xl:max-w-[350px] 2xl:max-w-[370px] mx-auto flex justify-center">
+                    <img
+                      src="/tutor/tutor-points-card.png"
+                      alt="Card background"
+                      className="w-[320px] h-[256px] sm:w-[370px] sm:h-[296px] md:w-[390px] md:h-[312px] lg:w-[370px] lg:h-[296px] xl:w-[350px] xl:h-[280px] 2xl:w-[370px] 2xl:h-[296px] object-cover"
+                    />
+                    <div className="absolute inset-0 flex flex-col justify-center items-center p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
+                      <h3
+                        className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-4 leading-tight"
+                        style={{ color: "#A25B2B" }}
+                      >
+                        Messaging & Chat Support
+                      </h3>
+                      <p
+                        className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-sans text-center leading-relaxed"
+                        style={{
+                          color: "#45290E",
+                          fontFamily: "Inter, sans-serif",
+                        }}
+                      >
+                        Stay connected with students through built-in chat for
+                        guidance and support.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
