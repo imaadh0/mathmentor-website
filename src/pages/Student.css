@@ -1211,8 +1211,8 @@
 }
 
 .footer-logo img {
-  width: 60px;
-  height: 60px;
+  width: clamp(60px, 10vw, 96px);
+  height: clamp(60px, 10vw, 96px);
   object-fit: cover;
 }
 
@@ -1289,7 +1289,100 @@
   text-align: center;
 }
 
+/* Colored separator between Privacy and Terms */
+.footer-separator {
+  color: #FF6300;
+}
+
 /* Responsive Design */
+/* Large tablets down: reduce gaps and sizes slightly */
+@media (max-width: 1024px) {
+  .footer-content {
+    gap: 2.5rem;
+  }
+  .footer-column h4,
+  .contact-email {
+    font-size: 1.5rem;
+  }
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Tablets: keep 2 columns but closer, tighten typography */
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .footer-tagline {
+    font-size: 1.1rem;
+  }
+  .footer-column h4,
+  .contact-email {
+    font-size: 1.35rem;
+  }
+}
+
+/* Mobile: stack columns, center align, smaller text and icons */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    text-align: center;
+    align-items: center;
+  }
+  .footer-left {
+    align-items: center;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .footer-column h4 {
+    margin: 0.25rem 0;
+    font-size: 1.3rem;
+  }
+  .contact-email {
+    font-size: 1.3rem;
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .social-link {
+    width: 38px;
+    height: 38px;
+  }
+  .footer-divider {
+    margin-bottom: 1.25rem;
+  }
+  .footer-copyright {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small mobile: tighten further */
+@media (max-width: 480px) {
+  .footer-tagline {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  .footer-column h4 {
+    font-size: 1.15rem;
+  }
+  .contact-email {
+    font-size: 1.1rem;
+  }
+  .social-link {
+    width: 34px;
+    height: 34px;
+  }
+  .footer-copyright {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 1200px) {
   .hero-title {
     font-size: clamp(2.5rem, 6vw, 5rem);
