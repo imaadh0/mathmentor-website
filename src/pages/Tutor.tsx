@@ -19,16 +19,16 @@ function Tutor() {
           <img
             src="/tutor/tutor-branch.png"
             alt="Branch decoration"
-            className="absolute top-0 right-0 w-auto h-auto max-w-[180px] sm:max-w-[250px] md:max-w-[350px] lg:max-w-[400px] xl:max-w-[600px] 2xl:max-w-none"
+            className="absolute top-0 right-0 w-auto h-auto max-w-[280px] sm:max-w-[370px] md:max-w-[460px] lg:max-w-[540px] xl:max-w-[600px] 2xl:max-w-[680px]"
             style={{ zIndex: 1 }}
           />
         </div>
 
         {/* Content wrapper */}
-        <div className="flex flex-col items-center justify-start h-full relative z-10 xl:flex-row xl:items-start xl:justify-start xl:pl-20 2xl:pl-28 xl:pt-0 2xl:pt-0">
-          {/* Wizard Boy - Absolute positioning */}
+        <div className="flex flex-col items-center justify-start h-full relative z-10 px-4 sm:px-6 xl:flex-row xl:items-center xl:justify-center xl:gap-16 xl:px-0 xl:max-w-[1200px] xl:mx-auto 2xl:max-w-[1300px]">
+          {/* Wizard Boy illustration */}
           <div
-            className="pointer-events-none order-2 xl:absolute xl:right-56 2xl:right-64 xl:top-16 2xl:top-20"
+            className="pointer-events-none order-2 mt-8 xl:order-2 xl:mt-6 xl:relative xl:-ml-32 2xl:-ml-44"
             style={{
               zIndex: 50,
             }}
@@ -36,13 +36,13 @@ function Tutor() {
             <img
               src="/tutor/wizard-boy.png"
               alt="Wizard boy character"
-              className="w-auto h-auto max-h-[320px] sm:max-h-[380px] md:max-h-[450px] xl:max-h-[550px] 2xl:max-h-[650px] 3xl:max-h-[750px]"
+              className="w-auto h-auto max-h-[360px] sm:max-h-[420px] md:max-h-[500px] xl:max-h-[620px] 2xl:max-h-[730px] 3xl:max-h-[840px]"
             />
           </div>
 
           {/* Hero Card */}
           <div
-            className="relative order-1 xl:order-1 xl:flex-shrink-0 xl:mt-0 xl:ml-8 2xl:ml-16"
+            className="relative order-1 xl:order-1 xl:flex-shrink-0 xl:mt-0 xl:ml-0 2xl:ml-4"
             style={{ zIndex: 1 }}
           >
             <img
