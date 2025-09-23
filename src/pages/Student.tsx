@@ -20,167 +20,333 @@ const Student: React.FC = () => {
   return (
     <div className="student-page">
       {/* Hero Section */}
-      <section className="hero-section">
-        <div className="hero-image-container">
-          <img src="/student/Hero1.png" alt="Math Learning Platform" className="hero-background-image" />
-          <img src="/student/Hero2.png" alt="Learn Math Smarter" className="hero-overlay-image" />
-          
-              {/* Text Overlay */}
-              <div className="hero-text-overlay">
-                <p className="hero-subtitle">Interactive lessons and<span className="mobile-and-br"><br /></span> practice<span className="desktop-practice-br"><br /></span> designed for<span className="mobile-for-br"><br /></span> students.</p>
-                <h1 className="hero-title">Learn Math<span className="mobile-math-br"><br /></span> Smarter</h1>
-              </div>
+      <section className="relative w-full pt-0 sm:pt-0 md:pt-0 flex justify-center">
+        {/* Background image (mobile) */}
+        <img
+          src="/student/mobileview.PNG"
+          alt="Math Learning Platform"
+          className="w-full object-cover block md:hidden"
+        />
 
-              {/* Left Signboard */}
-              <div className="left-signboard">
-                <p className="signboard-text">Access thousands of<br />lessons and practice<br />exercises tailored to<br />your grade and<br />skill level.</p>
-              </div>
+        {/* Background image (tablet/desktop) */}
+        <img
+          src="/student/Hero1.png"
+          alt="Math Learning Platform"
+          className="w-full object-contain hidden md:block"
+        />
 
-              {/* Right Signboard */}
-              <div className="right-signboard">
-                <p className="signboard-text">Master math concepts<br />step by step with<br />expert-designed<br />study plans for<br />better learning.</p>
-              </div>
+        {/* Overlay board (only >= md) */}
+        <img
+          src="/student/Hero2.png"
+          alt="Learn Math Smarter overlay"
+          className="absolute bottom-[-2%] left-1/2 -translate-x-1/2 w-[90%] hidden md:block"
+        />
+
+        {/* Text overlay */}
+        <div className="absolute left-1/2 -translate-x-1/2 text-center pointer-events-none top-[15%] sm:top-[16%] md:top-[25%] w-[90%]">
+          <p className="font-clash text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#45290E] drop-shadow-md leading-tight mb-4 md:mb-6">
+            Interactive lessons and<span className="hidden md:inline"> practice<br />designed for</span><span className="md:hidden"> practice designed for</span><br className="md:hidden" /> students.
+          </p>
+
+          <h1 className="font-clash-bold text-4xl sm:text-5xl md:text-6xl lg:text-[12rem] xl:text-[14rem] text-[#45290E] leading-tight" style={{ textShadow: '2px 2px 4px #E49F56' }}>
+            Learn&nbsp;Math<br className="md:hidden" /> Smarter
+          </h1>
+        </div>
+
+        {/* Left sign-board */}
+        <div className="absolute hidden md:block left-[9%] top-[63%] w-[28%] lg:w-[24%] text-center pointer-events-none">
+          <p className="font-clash text-xs md:text-sm lg:text-lg xl:text-xl text-[#45290E] drop-shadow-md leading-tight">
+            Access thousands of<br />lessons and practice<br />exercises tailored to<br />your grade and<br />skill level.
+          </p>
+        </div>
+
+        {/* Right sign-board */}
+        <div className="absolute hidden md:block right-[9%] top-[63%] w-[28%] lg:w-[24%] text-center pointer-events-none">
+          <p className="font-clash text-xs md:text-sm lg:text-lg xl:text-xl text-[#45290E] drop-shadow-md leading-tight">
+            Master math concepts<br />step by step with<br />expert-designed study<br />plans for better learning.
+          </p>
         </div>
       </section>
 
       {/* Math Made Better Section */}
-      <section className="math-made-better-section">
-        <div className="mmb-image-container">
-          <img src="/student/MMB1.png" alt="Math Made Better" className="mmb-background-image" />
-          
-          {/* Text Overlay */}
-          <div className="mmb-text-overlay">
-            <h2 className="mmb-title">Math Made Better</h2>
-            <p className="mmb-subtitle">Enhance your learning with powerful tools and features</p>
-          </div>
+      <section className="relative w-full py-12 lg:py-20">
+        {/* Background image - Desktop/Tablet only */}
+        <img
+          src="/student/MMB1.png"
+          alt="Math Made Better background"
+          className="w-full h-auto object-contain hidden md:block"
+        />
 
-          {/* MMB Feature Cards (5) */}
-          <div className="mmb-cards">
-            <div className="mmb-card-container">
-              <img src="/student/MMB2.png" alt="Quizzes & Practice Papers" className="mmb-card" />
-              <div className="mmb-card-text">
-                <h3 className="mmb-card-title">Quizzes &<br />Practice<br />Papers</h3>
-                <p className="mmb-card-description">Sharpen your skills<br />with curated tests and<br />instant results.</p>
+        {/* Main heading + subtitle - Desktop/Tablet */}
+        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 text-center w-[90%] max-w-[800px] hidden md:block">
+          <h2 className="font-clash-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#FDCB3F] drop-shadow-md uppercase mb-2 md:mb-3">
+            Math Made Better
+          </h2>
+          <p className="font-clash text-sm sm:text-base md:text-lg lg:text-xl text-white drop-shadow-md">
+            Enhance your learning with powerful tools and features
+          </p>
+        </div>
+
+        {/* Mobile heading + subtitle */}
+        <div className="text-center w-[90%] mx-auto md:hidden mb-8">
+          <h2 className="font-clash-bold text-2xl text-[#FDCB3F] drop-shadow-md uppercase mb-2">
+            Math Made Better
+          </h2>
+          <p className="font-clash text-sm text-white drop-shadow-md">
+            Enhance your learning with powerful tools and features
+          </p>
+        </div>
+
+        {/* Card grid (tablet / desktop) */}
+        <div className="absolute top-[28%] md:top-[30%] left-1/2 -translate-x-1/2 w-[95%] hidden md:grid grid-cols-3 gap-6 md:gap-8 xl:gap-10 place-items-center max-w-[1500px]">
+          {/* First row – 3 cards */}
+          {[
+            {
+              title: 'Quizzes &\nPractice\nPapers',
+              desc: 'Sharpen your skills\nwith curated tests\nand instant results.',
+            },
+            {
+              title: 'Video\nLessons',
+              desc: 'Learn from detailed,\nstep-by-step\ntutorials.',
+            },
+            {
+              title: 'Progress\nTracking',
+              desc: 'See your improvement\nover time with\nanalytics.',
+            },
+          ].map((c, i) => (
+            <div key={i} className="relative w-full max-w-[260px] lg:max-w-[300px] xl:max-w-[340px]">
+              <img src="/student/MMB2.png" alt={c.title} className="w-full h-auto object-contain" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
+                <h3 className="font-clash-bold text-xs sm:text-sm md:text-base lg:text-lg text-[#FFFFFF] leading-tight mb-1 whitespace-pre-line drop-shadow">
+                  {c.title}
+                </h3>
+                <p className="font-inter text-[8px] sm:text-[10px] md:text-xs lg:text-sm text-[#FFFFFF] leading-tight whitespace-pre-line">
+                  {c.desc}
+                </p>
               </div>
             </div>
-            
-            <div className="mmb-card-container">
-              <img src="/student/MMB2.png" alt="Video Lessons" className="mmb-card" />
-              <div className="mmb-card-text">
-                <h3 className="mmb-card-title">Video<br />Lessons</h3>
-                <p className="mmb-card-description">Learn from detailed,<br />step-by-step<br />tutorials.</p>
+          ))}
+
+          {/* Row 2 – 2 cards centered */}
+          <div className="col-span-3 flex justify-center gap-8 w-full">
+            <div className="relative justify-self-end max-w-[260px] lg:max-w-[300px] xl:max-w-[340px]">
+              <img src="/student/MMB2.png" alt="24/7 Access" className="w-full h-auto object-contain" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
+                <h3 className="font-clash-bold text-xs sm:text-sm md:text-base lg:text-lg text-[#FFFFFF] leading-tight mb-1 whitespace-pre-line drop-shadow">
+                  {`24/7\nAccess`}
+                </h3>
+                <p className="font-inter text-[8px] sm:text-[10px] md:text-xs lg:text-sm text-[#FFFFFF] leading-tight whitespace-pre-line">
+                  {`Study anytime,\nfrom any\ndevice.`}
+                </p>
               </div>
             </div>
-            
-            <div className="mmb-card-container">
-              <img src="/student/MMB2.png" alt="Progress Tracking" className="mmb-card" />
-              <div className="mmb-card-text">
-                <h3 className="mmb-card-title">Progress<br />Tracking</h3>
-                <p className="mmb-card-description">See your improvement<br />over time with<br />analytics.</p>
-              </div>
-            </div>
-            
-            <div className="mmb-card-container">
-              <img src="/student/MMB2.png" alt="24/7 Access" className="mmb-card" />
-              <div className="mmb-card-text">
-                <h3 className="mmb-card-title">24/7<br />Access</h3>
-                <p className="mmb-card-description">Study anytime,<br />from any<br />device.</p>
-              </div>
-            </div>
-            
-            <div className="mmb-card-container">
-              <img src="/student/MMB2.png" alt="Community Support" className="mmb-card" />
-              <div className="mmb-card-text">
-                <h3 className="mmb-card-title">Community<br />Support</h3>
-                <p className="mmb-card-description">Sharpen your skills<br />with curated tests<br />and instant results.</p>
+            <div className="relative justify-self-start max-w-[260px] lg:max-w-[300px] xl:max-w-[340px]">
+              <img src="/student/MMB2.png" alt="Community Support" className="w-full h-auto object-contain" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
+                <h3 className="font-clash-bold text-xs sm:text-sm md:text-base lg:text-lg text-[#FFFFFF] leading-tight mb-1 whitespace-pre-line drop-shadow">
+                  {`Community\nSupport`}
+                </h3>
+                <p className="font-inter text-[8px] sm:text-[10px] md:text-xs lg:text-sm text-[#FFFFFF] leading-tight whitespace-pre-line">
+                  {`Get help from peers\nand expert\nmentors.`}
+                </p>
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Mobile card stack */}
+        <div className="flex flex-col gap-6 items-center w-[92%] mx-auto md:hidden mt-10">
+          {[
+            'Quizzes &\nPractice\nPapers',
+            'Video\nLessons',
+            'Progress\nTracking',
+            '24/7\nAccess',
+            'Community\nSupport',
+          ].map((t, i) => (
+            <div key={i} className="relative w-full max-w-[260px]">
+              <img src="/student/MMB2.png" alt={t} className="w-full h-auto object-contain" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
+                <h3 className="font-clash-bold text-sm text-[#FFFFFF] leading-tight whitespace-pre-line">
+                  {t}
+                </h3>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Section 3 */}
-      <section className="section3">
-        <div className="section3-container">
-          <img src="/student/section3.png" alt="Section 3" className="section3-image" />
-        </div>
+      {/* New Section with section3.png */}
+      <section className="w-full relative py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+        <img
+          src="/student/section3.png"
+          alt="Section 3"
+          className="w-full h-auto object-cover"
+        />
       </section>
 
       {/* Plans That Work for You Section */}
-      <section className="plans-section">
-        <div className="plans-container">
-          {/* Text Overlay */}
-          <div className="plans-text-overlay">
-            <h2 className="plans-title">Plans That Work for You<span className="mobile-br"><br /></span></h2>
-            <p className="plans-subtitle">No hidden fees, just clear and simple<br /> learning options.</p>
-          </div>
+      <section className="w-full relative pt-6 sm:pt-8 md:pt-10 lg:pt-12 xl:pt-14 2xl:pt-16 pb-6">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 text-center mb-0">
+          <h2
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-clash-bold leading-tight mb-2 sm:mb-3"
+            style={{ color: '#FDCB3F', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}
+          >
+            Plans That Work for You
+          </h2>
+          <p
+            className="text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg font-clash text-white leading-relaxed max-w-4xl mx-auto"
+            style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}
+          >
+            No hidden fees, just clear and simple learning options.
+          </p>
+        </div>
 
-          {/* Pricing Cards */}
-          <div className="pricing-cards-container">
+        {/* Pricing Cards Grid */}
+        <div className="w-full mt-8 md:mt-12 lg:mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 w-[95%] mx-auto">
+            {/* Free Plan Card */}
             <div className="plan-card">
               <img src="/student/WFU1.png" alt="Free Plan" className="plan-card-image" />
               <div className="plan-card-text">
-                <h3 className="pricing-card-title">Free Plan</h3>
-                <p className="pricing-card-subtitle">Perfect for getting started</p>
-                <div className="pricing-card-price">
-                  <span className="price-amount">$0</span>
-                  <span className="price-period">/MONTH</span>
+                <h3 className="font-clash-bold text-white mb-2 text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-2xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Free Plan</h3>
+                <p className="font-clash text-[#FDCB3F] mb-3 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>Perfect for getting started</p>
+                <div className="flex items-baseline justify-center mb-3">
+                  <span className="font-clash-bold text-white text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-3xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>$0</span>
+                  <span className="font-clash text-[#FDCB3F] ml-1 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>/MONTH</span>
                 </div>
-                <p className="pricing-card-description">Forever free</p>
-                <ul className="pricing-features">
-                  <li className="feature-item checked">Up to 3 projects</li>
-                  <li className="feature-item checked">Basic templates</li>
-                  <li className="feature-item checked">Community support</li>
-                  <li className="feature-item checked">1GB storage</li>
-                  <li className="feature-item disabled">Priority support</li>
-                  <li className="feature-item disabled">Advanced analytics</li>
+                <p className="font-clash text-white mb-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>Forever free</p>
+                <ul className="list-none p-0 m-0 text-center w-full">
+                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Up to 3 projects
+                  </li>
+                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Basic templates
+                  </li>
+                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Community support
+                  </li>
+                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="absolute left-0 text-green-500 font-bold">✓</span>1GB storage
+                  </li>
+                  <li className="font-clash text-gray-400 opacity-50 mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="absolute left-0 text-gray-500 font-bold">✗</span>Priority support
+                  </li>
+                  <li className="font-clash text-gray-400 opacity-50 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="absolute left-0 text-gray-500 font-bold">✗</span>Advanced analytics
+                  </li>
                 </ul>
               </div>
-              <button className="pricing-button orange">Get Started Free</button>
+              <>
+                <style dangerouslySetInnerHTML={{
+                  __html: `
+                    .custom-text-1 {
+                      font-size: 14px !important;
+                    }
+                    @media (min-width: 640px) and (max-width: 1279px) {
+                      .custom-text-1 {
+                        font-size: 24px !important;
+                      }
+                    }
+                    @media (min-width: 1280px) {
+                      .custom-text-1 {
+                        font-size: 18px !important;
+                      }
+                    }
+                  `
+                }} />
+                <div className="custom-text-1 absolute bottom-[20%] left-1/2 text-white font-clash-bold cursor-pointer" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.9)', transform: 'translateX(-50%)', pointerEvents: 'auto', zIndex: 5 }}>Get Started Free</div>
+              </>
             </div>
-            
+            {/* Standard Plan Card */}
             <div className="plan-card">
-              <img src="/student/WFU2.png" alt="Free Plan" className="plan-card-image" />
+              <img src="/student/WFU2.png" alt="Standard Plan" className="plan-card-image" />
               <div className="plan-card-text">
-                <h3 className="pricing-card-title">Free Plan</h3>
-                <p className="pricing-card-subtitle">Perfect for getting started</p>
-                <div className="pricing-card-price">
-                  <span className="price-amount">$0</span>
-                  <span className="price-period">/MONTH</span>
+                <h3 className="font-clash-bold text-white mb-2 text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-2xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Standard Plan</h3>
+                <p className="font-clash text-[#FDCB3F] mb-3 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>More features to grow</p>
+                <div className="flex items-baseline justify-center mb-3">
+                  <span className="font-clash-bold text-white text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-3xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>$29</span>
+                  <span className="font-clash text-[#FDCB3F] ml-1 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>/MONTH</span>
                 </div>
-                <p className="pricing-card-description">Forever free</p>
-                <ul className="pricing-features">
-                  <li className="feature-item checked">Up to 3 projects</li>
-                  <li className="feature-item checked">Basic templates</li>
-                  <li className="feature-item checked">Community support</li>
-                  <li className="feature-item checked">1GB storage</li>
-                  <li className="feature-item disabled">Priority support</li>
-                  <li className="feature-item disabled">Advanced analytics</li>
+                <p className="font-clash text-white mb-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>Unlimited projects</p>
+                <ul className="list-none p-0 m-0 text-center w-full">
+                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Everything in Free
+                  </li>
+                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Advanced templates
+                  </li>
+                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Priority support
+                  </li>
+                  <li className="font-clash text-gray-400 opacity-50 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="absolute left-0 text-gray-500 font-bold">✗</span>Advanced analytics
+                  </li>
                 </ul>
               </div>
-              <button className="pricing-button blue">Get Started Free</button>
+              <>
+                <style dangerouslySetInnerHTML={{
+                  __html: `
+                    .custom-text-2 {
+                      font-size: 14px !important;
+                    }
+                    @media (min-width: 640px) and (max-width: 1279px) {
+                      .custom-text-2 {
+                        font-size: 24px !important;
+                      }
+                    }
+                    @media (min-width: 1280px) {
+                      .custom-text-2 {
+                        font-size: 18px !important;
+                      }
+                    }
+                  `
+                }} />
+                <div className="custom-text-2 absolute bottom-[20%] left-1/2 text-white font-clash-bold cursor-pointer" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.9)', transform: 'translateX(-50%)', pointerEvents: 'auto', zIndex: 5 }}>Choose Standard</div>
+              </>
             </div>
-            
+            {/* Premium Plan Card */}
             <div className="plan-card">
-              <img src="/student/WFU3.png" alt="Free Plan" className="plan-card-image" />
+              <img src="/student/WFU3.png" alt="Premium Plan" className="plan-card-image" />
               <div className="plan-card-text">
-                <h3 className="pricing-card-title">Free Plan</h3>
-                <p className="pricing-card-subtitle">Perfect for getting started</p>
-                <div className="pricing-card-price">
-                  <span className="price-amount">$0</span>
-                  <span className="price-period">/MONTH</span>
+                <h3 className="font-clash-bold text-white mb-2 text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-2xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Premium Plan</h3>
+                <p className="font-clash text-[#FDCB3F] mb-3 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>All features unlocked</p>
+                <div className="flex items-baseline justify-center mb-3">
+                  <span className="font-clash-bold text-white text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-3xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>$49</span>
+                  <span className="font-clash text-[#FDCB3F] ml-1 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>/MONTH</span>
                 </div>
-                <p className="pricing-card-description">Forever free</p>
-                <ul className="pricing-features">
-                  <li className="feature-item checked">Up to 3 projects</li>
-                  <li className="feature-item checked">Basic templates</li>
-                  <li className="feature-item checked">Community support</li>
-                  <li className="feature-item checked">1GB storage</li>
-                  <li className="feature-item disabled">Priority support</li>
-                  <li className="feature-item disabled">Advanced analytics</li>
+                <p className="font-clash text-white mb-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>Advanced analytics</p>
+                <ul className="list-none p-0 m-0 text-center w-full">
+                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Everything in Standard
+                  </li>
+                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Advanced analytics
+                  </li>
+                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Dedicated support
+                  </li>
                 </ul>
               </div>
-              <button className="pricing-button pink">Get Started Free</button>
+              <>
+                <style dangerouslySetInnerHTML={{
+                  __html: `
+                    .custom-text-3 {
+                      font-size: 14px !important;
+                    }
+                    @media (min-width: 640px) and (max-width: 1279px) {
+                      .custom-text-3 {
+                        font-size: 24px !important;
+                      }
+                    }
+                    @media (min-width: 1280px) {
+                      .custom-text-3 {
+                        font-size: 18px !important;
+                      }
+                    }
+                  `
+                }} />
+                <div className="custom-text-3 absolute bottom-[20%] left-1/2 text-white font-clash-bold cursor-pointer" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.9)', transform: 'translateX(-50%)', pointerEvents: 'auto', zIndex: 5 }}>Go Premium</div>
+              </>
             </div>
           </div>
         </div>
