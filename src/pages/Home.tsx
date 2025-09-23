@@ -161,18 +161,18 @@ function Home() {
                 </p>
               </div>
 
-              {/* Cards Flex - Three Cards */}
-              <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 sm:gap-8 md:gap-4 lg:gap-4 xl:gap-6 2xl:gap-8 w-full">
+              {/* Desktop Layout - 3 cards in a row */}
+              <div className="hidden lg:flex lg:flex-row justify-center items-stretch gap-4 xl:gap-6 2xl:gap-8 w-full">
                 {/* Card 1 - Personalized Learning Paths */}
-                <div className="relative w-full flex-1 max-w-[350px] sm:max-w-[400px] md:max-w-[600px] lg:w-[35%] xl:w-[36%] 2xl:w-[38%]">
+                <div className="relative w-full flex-1 lg:w-[35%] xl:w-[36%] 2xl:w-[38%]">
                   <img
                     src="/home/section2.png"
                     alt="Personalized Learning Paths"
                     className="w-full h-auto object-contain"
                   />
-                  <div className="absolute inset-0 flex flex-col justify-center items-center p-6 sm:p-8 md:p-6 lg:p-8 xl:p-10 testimonial-content">
+                  <div className="absolute inset-0 flex flex-col justify-center items-center p-8 xl:p-10 testimonial-content">
                     <h3
-                      className="text-lg sm:text-xl md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-2 lg:mb-3 leading-tight"
+                      className="text-xl xl:text-2xl 2xl:text-3xl font-clash-bold text-center mb-3 leading-tight"
                       style={{ color: "#A25B2B" }}
                     >
                       Personalized<br />Learning<br />Paths
@@ -181,15 +181,15 @@ function Home() {
                 </div>
 
                 {/* Card 2 - Rapid Skill Development */}
-                <div className="relative w-full flex-1 max-w-[350px] sm:max-w-[400px] md:max-w-[600px] lg:w-[35%] xl:w-[36%] 2xl:w-[38%]">
+                <div className="relative w-full flex-1 lg:w-[35%] xl:w-[36%] 2xl:w-[38%]">
                   <img
                     src="/home/section2.png"
                     alt="Rapid Skill Development"
                     className="w-full h-auto object-contain"
                   />
-                  <div className="absolute inset-0 flex flex-col justify-center items-center p-6 sm:p-8 md:p-6 lg:p-8 xl:p-10 testimonial-content">
+                  <div className="absolute inset-0 flex flex-col justify-center items-center p-8 xl:p-10 testimonial-content">
                     <h3
-                      className="text-lg sm:text-xl md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-2 lg:mb-3 leading-tight"
+                      className="text-xl xl:text-2xl 2xl:text-3xl font-clash-bold text-center mb-3 leading-tight"
                       style={{ color: "#A25B2B" }}
                     >
                       Rapid Skill<br />Development<br />Path
@@ -198,15 +198,123 @@ function Home() {
                 </div>
 
                 {/* Card 3 - Comprehensive Concept Mastery */}
-                <div className="relative w-full flex-1 max-w-[350px] sm:max-w-[400px] md:max-w-[600px] lg:w-[35%] xl:w-[36%] 2xl:w-[38%]">
+                <div className="relative w-full flex-1 lg:w-[35%] xl:w-[36%] 2xl:w-[38%]">
                   <img
                     src="/home/section2.png"
                     alt="Comprehensive Concept Mastery"
                     className="w-full h-auto object-contain"
                   />
-                  <div className="absolute inset-0 flex flex-col justify-center items-center p-6 sm:p-8 md:p-6 lg:p-8 xl:p-10 testimonial-content">
+                  <div className="absolute inset-0 flex flex-col justify-center items-center p-8 xl:p-10 testimonial-content">
                     <h3
-                      className="text-lg sm:text-xl md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-clash-bold text-center mb-2 sm:mb-3 md:mb-2 lg:mb-3 leading-tight"
+                      className="text-xl xl:text-2xl 2xl:text-3xl font-clash-bold text-center mb-3 leading-tight"
+                      style={{ color: "#A25B2B" }}
+                    >
+                      Comprehensive<br />Concept<br />Mastery
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              {/* Tablet Layout - Single column with smaller cards */}
+              <div className="hidden md:flex lg:hidden flex-col items-center gap-20">
+                {/* Card 1 - Personalized Learning Paths */}
+                <div className="relative w-full max-w-[500px]">
+                  <img
+                    src="/home/section2.png"
+                    alt="Personalized Learning Paths"
+                    className="w-full h-auto object-contain scale-110"
+                  />
+                  <div className="absolute inset-0 flex flex-col justify-center items-center px-16 pt-16 pb-12">
+                    <h3
+                      className="text-base font-clash-bold text-center mb-3"
+                      style={{ color: "#A25B2B" }}
+                    >
+                      Personalized<br />Learning<br />Paths
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Card 2 - Rapid Skill Development */}
+                <div className="relative w-full max-w-[500px]">
+                  <img
+                    src="/home/section2.png"
+                    alt="Rapid Skill Development"
+                    className="w-full h-auto object-contain scale-110"
+                  />
+                  <div className="absolute inset-0 flex flex-col justify-center items-center px-16 pt-16 pb-12">
+                    <h3
+                      className="text-base font-clash-bold text-center mb-3"
+                      style={{ color: "#A25B2B" }}
+                    >
+                      Rapid Skill<br />Development<br />Path
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Card 3 - Comprehensive Concept Mastery */}
+                <div className="relative w-full max-w-[500px]">
+                  <img
+                    src="/home/section2.png"
+                    alt="Comprehensive Concept Mastery"
+                    className="w-full h-auto object-contain scale-110"
+                  />
+                  <div className="absolute inset-0 flex flex-col justify-center items-center px-16 pt-16 pb-12">
+                    <h3
+                      className="text-base font-clash-bold text-center mb-3"
+                      style={{ color: "#A25B2B" }}
+                    >
+                      Comprehensive<br />Concept<br />Mastery
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile Layout - Single column */}
+              <div className="md:hidden flex flex-col items-center gap-24 sm:gap-28">
+                {/* Card 1 - Personalized Learning Paths */}
+                <div className="relative w-full max-w-[350px] sm:max-w-[400px]">
+                  <img
+                    src="/home/section2.png"
+                    alt="Personalized Learning Paths"
+                    className="w-full h-auto object-contain"
+                  />
+                  <div className="absolute inset-0 flex flex-col justify-center items-center p-6 sm:p-8 testimonial-content">
+                    <h3
+                      className="text-lg sm:text-xl font-clash-bold text-center mb-2 sm:mb-3 leading-tight"
+                      style={{ color: "#A25B2B" }}
+                    >
+                      Personalized<br />Learning<br />Paths
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Card 2 - Rapid Skill Development */}
+                <div className="relative w-full max-w-[350px] sm:max-w-[400px]">
+                  <img
+                    src="/home/section2.png"
+                    alt="Rapid Skill Development"
+                    className="w-full h-auto object-contain"
+                  />
+                  <div className="absolute inset-0 flex flex-col justify-center items-center p-6 sm:p-8 testimonial-content">
+                    <h3
+                      className="text-lg sm:text-xl font-clash-bold text-center mb-2 sm:mb-3 leading-tight"
+                      style={{ color: "#A25B2B" }}
+                    >
+                      Rapid Skill<br />Development<br />Path
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Card 3 - Comprehensive Concept Mastery */}
+                <div className="relative w-full max-w-[350px] sm:max-w-[400px]">
+                  <img
+                    src="/home/section2.png"
+                    alt="Comprehensive Concept Mastery"
+                    className="w-full h-auto object-contain"
+                  />
+                  <div className="absolute inset-0 flex flex-col justify-center items-center p-6 sm:p-8 testimonial-content">
+                    <h3
+                      className="text-lg sm:text-xl font-clash-bold text-center mb-2 sm:mb-3 leading-tight"
                       style={{ color: "#A25B2B" }}
                     >
                       Comprehensive<br />Concept<br />Mastery
@@ -627,6 +735,186 @@ function Home() {
                     {/* Testimonial Text */}
                     <p
                       className="text-xs xl:text-sm 2xl:text-base font-clash text-center leading-relaxed"
+                      style={{
+                        color: "white",
+                        fontFamily: '"ClashOfClans", sans-serif',
+                        textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)",
+                      }}
+                    >
+                      Join our community in minutes by creating your free tutor
+                      profile. Highlight your skills, set your subjects
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Tablet Layout - Single column with smaller cards */}
+              <div className="hidden md:flex lg:hidden flex-col items-center gap-20">
+                {/* Testimonial Card 1 */}
+                <div className="relative w-full max-w-[500px]">
+                  <img
+                    src="/About/about-rating-card.png"
+                    alt="Student testimonial card"
+                    className="w-full h-auto object-contain scale-110"
+                  />
+                  {/* Rating Circle */}
+                  <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-10">
+                    <img
+                      src="/About/about-rating-circle.png"
+                      alt="Rating circle"
+                      className="w-60 h-60"
+                    />
+                  </div>
+                  {/* Profile Image */}
+                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-44 h-44 rounded-full overflow-hidden z-20">
+                    <img
+                      src="/About/about-rating-image.png"
+                      alt="Student profile"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Content Overlay */}
+                  <div className="absolute inset-0 flex flex-col justify-center items-center px-16 pt-16 pb-12">
+                    {/* Student Name */}
+                    <h3
+                      className="text-base font-clash-bold text-center mb-3"
+                      style={{
+                        color: "white",
+                        fontFamily: '"ClashOfClans", sans-serif',
+                        textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+                      }}
+                    >
+                      Sajad AHamed
+                    </h3>
+                    {/* Star Rating */}
+                    <div className="flex justify-center mb-3">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className="text-yellow-500 text-lg mx-0.5">
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    {/* Testimonial Text */}
+                    <p
+                      className="text-sm font-clash text-center leading-relaxed"
+                      style={{
+                        color: "white",
+                        fontFamily: '"ClashOfClans", sans-serif',
+                        textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)",
+                      }}
+                    >
+                      Join our community in minutes by creating your free tutor
+                      profile. Highlight your skills, set your subjects
+                    </p>
+                  </div>
+                </div>
+
+                {/* Testimonial Card 2 */}
+                <div className="relative w-full max-w-[500px]">
+                  <img
+                    src="/About/about-rating-card.png"
+                    alt="Student testimonial card"
+                    className="w-full h-auto object-contain scale-110"
+                  />
+                  {/* Rating Circle */}
+                  <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-10">
+                    <img
+                      src="/About/about-rating-circle.png"
+                      alt="Rating circle"
+                      className="w-60 h-60"
+                    />
+                  </div>
+                  {/* Profile Image */}
+                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-44 h-44 rounded-full overflow-hidden z-20">
+                    <img
+                      src="/About/about-rating-image.png"
+                      alt="Student profile"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Content Overlay */}
+                  <div className="absolute inset-0 flex flex-col justify-center items-center px-16 pt-16 pb-12">
+                    {/* Student Name */}
+                    <h3
+                      className="text-base font-clash-bold text-center mb-3"
+                      style={{
+                        color: "white",
+                        fontFamily: '"ClashOfClans", sans-serif',
+                        textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+                      }}
+                    >
+                      Sajad AHamed
+                    </h3>
+                    {/* Star Rating */}
+                    <div className="flex justify-center mb-3">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className="text-yellow-500 text-lg mx-0.5">
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    {/* Testimonial Text */}
+                    <p
+                      className="text-sm font-clash text-center leading-relaxed"
+                      style={{
+                        color: "white",
+                        fontFamily: '"ClashOfClans", sans-serif',
+                        textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)",
+                      }}
+                    >
+                      Join our community in minutes by creating your free tutor
+                      profile. Highlight your skills, set your subjects
+                    </p>
+                  </div>
+                </div>
+
+                {/* Testimonial Card 3 */}
+                <div className="relative w-full max-w-[500px]">
+                  <img
+                    src="/About/about-rating-card.png"
+                    alt="Student testimonial card"
+                    className="w-full h-auto object-contain scale-110"
+                  />
+                  {/* Rating Circle */}
+                  <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-10">
+                    <img
+                      src="/About/about-rating-circle.png"
+                      alt="Rating circle"
+                      className="w-60 h-60"
+                    />
+                  </div>
+                  {/* Profile Image */}
+                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-44 h-44 rounded-full overflow-hidden z-20">
+                    <img
+                      src="/About/about-rating-image.png"
+                      alt="Student profile"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Content Overlay */}
+                  <div className="absolute inset-0 flex flex-col justify-center items-center px-16 pt-16 pb-12">
+                    {/* Student Name */}
+                    <h3
+                      className="text-base font-clash-bold text-center mb-3"
+                      style={{
+                        color: "white",
+                        fontFamily: '"ClashOfClans", sans-serif',
+                        textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+                      }}
+                    >
+                      Sajad AHamed
+                    </h3>
+                    {/* Star Rating */}
+                    <div className="flex justify-center mb-3">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className="text-yellow-500 text-lg mx-0.5">
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    {/* Testimonial Text */}
+                    <p
+                      className="text-sm font-clash text-center leading-relaxed"
                       style={{
                         color: "white",
                         fontFamily: '"ClashOfClans", sans-serif',
