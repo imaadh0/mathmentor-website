@@ -1,3 +1,7 @@
+import React from 'react';
+import '../pages/Student.css';
+import Footer from '../components/Footer';
+
 function Home() {
   return (
     <>
@@ -9,7 +13,6 @@ function Home() {
           backgroundSize: "cover",
           backgroundPosition: "top center",
           backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
           minHeight: "100vh",
           fontFamily: '"ClashOfClans", sans-serif',
         }}
@@ -1137,7 +1140,14 @@ function Home() {
 
 
 
+          {/* Gap between sections and footer */}
+          <div className="w-full py-8 lg:py-12 xl:py-16 2xl:py-20"></div>
         </div>
+      </div>
+
+      {/* Full width footer */}
+      <div style={{ backgroundColor: '#0D0D0D' }}>
+        <Footer />
       </div>
 
     </>
