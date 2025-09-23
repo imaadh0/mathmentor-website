@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from '../components/Footer';
 import './Student.css';
+import Footer from '../components/Footer';
 
 const Student: React.FC = () => {
   // Parallax effect will be added back once background is confirmed working
@@ -203,164 +203,106 @@ const Student: React.FC = () => {
 
         {/* Pricing Cards Grid */}
         <div className="w-full mt-8 md:mt-12 lg:mt-16">
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 w-[95%] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 w-[95%] mx-auto">
             {/* Free Plan Card */}
-            <div className="plan-card">
-              <img src="/student/WFU1.png" alt="Free Plan" className="plan-card-image" />
-              <div className="plan-card-text">
-                <h3 className="font-clash-bold text-white mb-2 text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-2xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Free Plan</h3>
-                <p className="font-clash text-[#FDCB3F] mb-3 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>Perfect for getting started</p>
+            <div className="relative w-full flex justify-center items-center">
+              <img src="/student/WFU1.png" alt="Free Plan" className="w-full h-auto object-contain transition-transform duration-300 hover:transform hover:translate-y-[-5px]" />
+              <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none w-[80%] max-w-[280px] flex flex-col items-center">
+                <h3 className="font-clash-bold text-white mb-2 text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Free Plan</h3>
+                <p className="font-clash text-[#FDCB3F] mb-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                  Perfect for<br className="hidden sm:block md:block lg:hidden xl:hidden" /> getting started
+                </p>
                 <div className="flex items-baseline justify-center mb-3">
-                  <span className="font-clash-bold text-white text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-3xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>$0</span>
-                  <span className="font-clash text-[#FDCB3F] ml-1 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>/MONTH</span>
+                  <span className="font-clash-bold text-white text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-3xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>$0</span>
+                  <span className="font-clash text-[#FDCB3F] ml-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>/MONTH</span>
                 </div>
-                <p className="font-clash text-white mb-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>Forever free</p>
+                <p className="font-clash text-white mb-4 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>Forever free</p>
                 <ul className="list-none p-0 m-0 text-center w-full">
-                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Up to 3 projects
+                  <li className="font-clash text-white mb-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="text-green-500 font-bold mr-1">✓</span>Up to 3 projects
                   </li>
-                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Basic templates
+                  <li className="font-clash text-white mb-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="text-green-500 font-bold mr-1">✓</span>Basic templates
                   </li>
-                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Community support
+                  <li className="font-clash text-white mb-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="text-green-500 font-bold mr-1">✓</span>Community support
                   </li>
-                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                    <span className="absolute left-0 text-green-500 font-bold">✓</span>1GB storage
+                  <li className="font-clash text-white mb-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="text-green-500 font-bold mr-1">✓</span>1GB storage
                   </li>
-                  <li className="font-clash text-gray-400 opacity-50 mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                    <span className="absolute left-0 text-gray-500 font-bold">✗</span>Priority support
+                  <li className="font-clash text-gray-400 opacity-50 mb-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="text-gray-500 font-bold mr-1">✗</span>Priority support
                   </li>
-                  <li className="font-clash text-gray-400 opacity-50 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                    <span className="absolute left-0 text-gray-500 font-bold">✗</span>Advanced analytics
+                  <li className="font-clash text-gray-400 opacity-50 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="text-gray-500 font-bold mr-1">✗</span>Advanced analytics
                   </li>
                 </ul>
               </div>
-              <>
-                <style dangerouslySetInnerHTML={{
-                  __html: `
-                    .custom-text-1 {
-                      font-size: 14px !important;
-                    }
-                    @media (min-width: 640px) and (max-width: 1279px) {
-                      .custom-text-1 {
-                        font-size: 24px !important;
-                      }
-                    }
-                    @media (min-width: 1280px) {
-                      .custom-text-1 {
-                        font-size: 18px !important;
-                      }
-                    }
-                  `
-                }} />
-                <div className="custom-text-1 absolute bottom-[20%] left-1/2 text-white font-clash-bold cursor-pointer" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.9)', transform: 'translateX(-50%)', pointerEvents: 'auto', zIndex: 5 }}>Get Started Free</div>
-              </>
+              <div className="absolute bottom-[20%] left-1/2 text-white font-clash-bold cursor-pointer text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.9)', transform: 'translateX(-50%)', pointerEvents: 'auto', zIndex: 5 }}>Get Started Free</div>
             </div>
             {/* Standard Plan Card */}
-            <div className="plan-card">
-              <img src="/student/WFU2.png" alt="Standard Plan" className="plan-card-image" />
-              <div className="plan-card-text">
-                <h3 className="font-clash-bold text-white mb-2 text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-2xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Standard Plan</h3>
-                <p className="font-clash text-[#FDCB3F] mb-3 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>More features to grow</p>
+            <div className="relative w-full flex justify-center items-center">
+              <img src="/student/WFU2.png" alt="Standard Plan" className="w-full h-auto object-contain transition-transform duration-300 hover:transform hover:translate-y-[-5px]" />
+              <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none w-[80%] max-w-[280px] flex flex-col items-center">
+                <h3 className="font-clash-bold text-white mb-2 text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Standard Plan</h3>
+                <p className="font-clash text-[#FDCB3F] mb-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>More features to grow</p>
                 <div className="flex items-baseline justify-center mb-3">
-                  <span className="font-clash-bold text-white text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-3xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>$29</span>
-                  <span className="font-clash text-[#FDCB3F] ml-1 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>/MONTH</span>
+                  <span className="font-clash-bold text-white text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-3xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>$29</span>
+                  <span className="font-clash text-[#FDCB3F] ml-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>/MONTH</span>
                 </div>
-                <p className="font-clash text-white mb-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>Unlimited projects</p>
+                <p className="font-clash text-white mb-4 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>Unlimited projects</p>
                 <ul className="list-none p-0 m-0 text-center w-full">
-                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Everything in Free
+                  <li className="font-clash text-white mb-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="text-green-500 font-bold mr-1">✓</span>Everything in Free
                   </li>
-                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Advanced templates
+                  <li className="font-clash text-white mb-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="text-green-500 font-bold mr-1">✓</span>Advanced templates
                   </li>
-                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Priority support
+                  <li className="font-clash text-white mb-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="text-green-500 font-bold mr-1">✓</span>Priority support
                   </li>
-                  <li className="font-clash text-gray-400 opacity-50 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                    <span className="absolute left-0 text-gray-500 font-bold">✗</span>Advanced analytics
+                  <li className="font-clash text-gray-400 opacity-50 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="text-gray-500 font-bold mr-1">✗</span>Advanced analytics
                   </li>
                 </ul>
               </div>
-              <>
-                <style dangerouslySetInnerHTML={{
-                  __html: `
-                    .custom-text-2 {
-                      font-size: 14px !important;
-                    }
-                    @media (min-width: 640px) and (max-width: 1279px) {
-                      .custom-text-2 {
-                        font-size: 24px !important;
-                      }
-                    }
-                    @media (min-width: 1280px) {
-                      .custom-text-2 {
-                        font-size: 18px !important;
-                      }
-                    }
-                  `
-                }} />
-                <div className="custom-text-2 absolute bottom-[20%] left-1/2 text-white font-clash-bold cursor-pointer" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.9)', transform: 'translateX(-50%)', pointerEvents: 'auto', zIndex: 5 }}>Choose Standard</div>
-              </>
+              <div className="absolute bottom-[20%] left-1/2 text-white font-clash-bold cursor-pointer text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.9)', transform: 'translateX(-50%)', pointerEvents: 'auto', zIndex: 5 }}>Choose Standard</div>
             </div>
             {/* Premium Plan Card */}
-            <div className="plan-card">
-              <img src="/student/WFU3.png" alt="Premium Plan" className="plan-card-image" />
-              <div className="plan-card-text">
-                <h3 className="font-clash-bold text-white mb-2 text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-2xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Premium Plan</h3>
-                <p className="font-clash text-[#FDCB3F] mb-3 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>All features unlocked</p>
+            <div className="relative w-full flex justify-center items-center">
+              <img src="/student/WFU3.png" alt="Premium Plan" className="w-full h-auto object-contain transition-transform duration-300 hover:transform hover:translate-y-[-5px]" />
+              <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none w-[80%] max-w-[280px] flex flex-col items-center">
+                <h3 className="font-clash-bold text-white mb-2 text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Premium Plan</h3>
+                <p className="font-clash text-[#FDCB3F] mb-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>All features unlocked</p>
                 <div className="flex items-baseline justify-center mb-3">
-                  <span className="font-clash-bold text-white text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-3xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>$49</span>
-                  <span className="font-clash text-[#FDCB3F] ml-1 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>/MONTH</span>
+                  <span className="font-clash-bold text-white text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-3xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>$49</span>
+                  <span className="font-clash text-[#FDCB3F] ml-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>/MONTH</span>
                 </div>
-                <p className="font-clash text-white mb-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>Advanced analytics</p>
+                <p className="font-clash text-white mb-4 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>Advanced analytics</p>
                 <ul className="list-none p-0 m-0 text-center w-full">
-                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Everything in Standard
+                  <li className="font-clash text-white mb-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="text-green-500 font-bold mr-1">✓</span>Everything in Standard
                   </li>
-                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Advanced analytics
+                  <li className="font-clash text-white mb-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="text-green-500 font-bold mr-1">✓</span>Advanced analytics
                   </li>
-                  <li className="font-clash text-white mb-1 relative pl-4 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                    <span className="absolute left-0 text-green-500 font-bold">✓</span>Dedicated support
+                  <li className="font-clash text-white mb-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                    <span className="text-green-500 font-bold mr-1">✓</span>Dedicated support
                   </li>
                 </ul>
               </div>
-              <>
-                <style dangerouslySetInnerHTML={{
-                  __html: `
-                    .custom-text-3 {
-                      font-size: 14px !important;
-                    }
-                    @media (min-width: 640px) and (max-width: 1279px) {
-                      .custom-text-3 {
-                        font-size: 24px !important;
-                      }
-                    }
-                    @media (min-width: 1280px) {
-                      .custom-text-3 {
-                        font-size: 18px !important;
-                      }
-                    }
-                  `
-                }} />
-                <div className="custom-text-3 absolute bottom-[20%] left-1/2 text-white font-clash-bold cursor-pointer" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.9)', transform: 'translateX(-50%)', pointerEvents: 'auto', zIndex: 5 }}>Go Premium</div>
-              </>
+              <div className="absolute bottom-[20%] left-1/2 text-white font-clash-bold cursor-pointer text-xs sm:text-sm md:text-base lg:text-lg xl:text-base" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.9)', transform: 'translateX(-50%)', pointerEvents: 'auto', zIndex: 5 }}>Go Premium</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      
+        {/* Gap between sections and footer */}
+        <div className="w-full py-8 lg:py-12 xl:py-16 2xl:py-20"></div>
 
-      
-      
-
-      <Footer />
-    </div>
-  );
-};
-
-export default Student;
+        <Footer />
+      </div>
+    );
+  };
+  
+  export default Student;
