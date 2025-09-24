@@ -1136,12 +1136,8 @@ function Home() {
             </div>
           </div>
 
-
-
-
-
           {/* Gap between sections and footer */}
-          <div className="w-full py-8 lg:py-12 xl:py-16 2xl:py-20"></div>
+          <div className="w-full py-2 lg:py-3 xl:py-4 2xl:py-5"></div>
         </div>
       </div>
 
